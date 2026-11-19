@@ -1,8 +1,8 @@
 
-import Card1 from "../assets/Card1.png";
-import Card2 from "../assets/Card2.png";
-import Card3 from "../assets/Card3.png";
-import Button from "../component/Button";
+import Card1 from "../../assets/Card1.png";
+import Card2 from "../../assets/Card2.png";
+import Card3 from "../../assets/Card3.png";
+import Button from "../../component/Button";
 
 import {
   ArrowUpRight,

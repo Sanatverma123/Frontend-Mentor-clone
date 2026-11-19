@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -15,7 +14,7 @@ function Button({
   className = "",
 }) {
   const buttonStyle =
-    "inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-bold transition-all shadow-[3px_3px_0px_#1e3a8a] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[3px_3px_0px_#1e3a8a]";
+    "inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-600 hover:from-purple-600 hover:via-indigo-700 hover:to-blue-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-bold transition-all shadow-[3px_3px_0px_#1e40af] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[3px_3px_0px_#1e40af]";
 
   const finalClass = `${buttonStyle} ${className}`;
 
@@ -70,4 +69,3 @@ function Button({
 }
 
 export default Button;
-

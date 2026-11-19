@@ -1,6 +1,6 @@
 
-import heroImage from "../assets/hero.png";
-import Button from "../component/Button";
+import heroImage from "../../assets/hero.png";
+import Button from "../../component/Button";
 
 function HeroSection() {
   return (

@@ -1,7 +1,7 @@
 
-import comp1 from "../assets/Comp1.png";
-import comp2 from "../assets/Comp2.png";
-import Button from "../component/Button";
+import comp1 from "../../assets/Comp1.png";
+import comp2 from "../../assets/Comp2.png";
+import Button from "../../component/Button";
 
 function ForCompanies() {
   return (

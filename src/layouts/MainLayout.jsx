@@ -9,12 +9,15 @@ const MainLayout = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900">
 
-      {location.pathname === "/" && <Navbar />}
+      {/* NAVBAR */}
+       <Navbar />
 
+      {/* PAGE CONTENT */}
       <main className="flex-grow">
         <Outlet />
       </main>
 
+      {/* FOOTER */}
       <Footer />
 
     </div>

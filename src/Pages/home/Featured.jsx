@@ -1,7 +1,7 @@
 
-import Fcard from "../assets/Fcard.png";
-import Fcard2 from "../assets/Fcard2.png";
-import Fcard3 from "../assets/Fcard3.png";
+import Fcard from "../../assets/Fcard.png";
+import Fcard2 from "../../assets/Fcard2.png";
+import Fcard3 from "../../assets/Fcard3.png";
 
 function Featured() {
   return (

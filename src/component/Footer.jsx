@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import Button from "../component/Button";
 
@@ -9,13 +8,10 @@ function Footer() {
       className="bg-gradient-to-br from-blue-50 via-white to-sky-50 text-slate-900 border-t border-blue-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 py-10 sm:py-12 md:py-14 lg:py-16">
-
         {/* FOOTER CONTENT */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 sm:gap-x-6 md:gap-x-7 lg:gap-8 gap-y-8">
-
           {/* NEWSLETTER */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
-
             <h2 className="text-xl sm:text-2xl md:text-2xl font-extrabold text-slate-900">
               <span className="text-blue-600">Stay up to date</span>
             </h2>
@@ -55,12 +51,26 @@ function Footer() {
             </h3>
 
             <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600">
-              <a href="#" className="hover:text-blue-600 transition">Unlock Pro</a>
-              <a href="#" className="hover:text-blue-600 transition">Contact us</a>
-              <a href="#" className="hover:text-blue-600 transition">FAQs</a>
-              <a href="#" className="hover:text-blue-600 transition">Become a partner</a>
-              <a href="#" className="hover:text-blue-600 transition">Use cases</a>
-              <a href="#" className="hover:text-blue-600 transition">Technologies</a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Unlock Pro
+              </a>
+
+              <Link to="/contact" className="hover:text-blue-600 transition">
+                Contact us
+              </Link>
+
+              <a href="#" className="hover:text-blue-600 transition">
+                FAQs
+              </a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Become a partner
+              </a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Use cases
+              </a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Technologies
+              </a>
             </div>
           </div>
 
@@ -71,10 +81,18 @@ function Footer() {
             </h3>
 
             <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600">
-              <Link to="/challenges" className="hover:text-blue-600 transition">Challenges</Link>
-              <Link to="/portfolio" className="hover:text-blue-600 transition">Solutions</Link>
-              <Link to="/practice" className="hover:text-blue-600 transition">Articles</Link>
-              <Link to="/practice" className="hover:text-blue-600 transition">Guides</Link>
+              <Link to="/challenges" className="hover:text-blue-600 transition">
+                Challenges
+              </Link>
+              <Link to="/portfolio" className="hover:text-blue-600 transition">
+                Solutions
+              </Link>
+              <Link to="/practice" className="hover:text-blue-600 transition">
+                Articles
+              </Link>
+              <Link to="/practice" className="hover:text-blue-600 transition">
+                Guides
+              </Link>
             </div>
           </div>
 
@@ -85,8 +103,12 @@ function Footer() {
             </h3>
 
             <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600">
-              <a href="#" className="hover:text-blue-600 transition">Discord</a>
-              <a href="#" className="hover:text-blue-600 transition">Guidelines</a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Discord
+              </a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Guidelines
+              </a>
             </div>
           </div>
 
@@ -97,29 +119,37 @@ function Footer() {
             </h3>
 
             <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600">
-              <a href="#" className="hover:text-blue-600 transition">Hire developers</a>
-              <a href="#" className="hover:text-blue-600 transition">Train developers</a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Hire developers
+              </a>
+              <a href="#" className="hover:text-blue-600 transition">
+                Train developers
+              </a>
             </div>
           </div>
-
         </div>
 
         {/* COPYRIGHT */}
         <div className="border-t border-blue-200 mt-8 sm:mt-10 md:mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-slate-500">
-
           <p className="text-center md:text-left">
             © Frontend Mentor 2019 - 2026
           </p>
 
           <div className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-3">
-            <a href="#" className="hover:text-blue-600 transition">Terms</a>
-            <a href="#" className="hover:text-blue-600 transition">Cookie Policy</a>
-            <a href="#" className="hover:text-blue-600 transition">Privacy Policy</a>
-            <a href="#" className="hover:text-blue-600 transition">License</a>
+            <a href="#" className="hover:text-blue-600 transition">
+              Terms
+            </a>
+            <a href="#" className="hover:text-blue-600 transition">
+              Cookie Policy
+            </a>
+            <a href="#" className="hover:text-blue-600 transition">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-blue-600 transition">
+              License
+            </a>
           </div>
-
         </div>
-
       </div>
     </footer>
   );

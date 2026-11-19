@@ -1,5 +1,5 @@
 
-import WorksImage from "../assets/Works.png";
+import WorksImage from "../../assets/Works.png";
 
 function Works() {
   return (

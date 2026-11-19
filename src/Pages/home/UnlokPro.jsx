@@ -1,5 +1,5 @@
 
-import Button from "../component/Button";
+import Button from "../../component/Button";
 
 function UnlokPro() {
   return (

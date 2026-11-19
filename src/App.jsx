@@ -2,10 +2,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./layouts/MainLayout";
-import Home from "./Pages/Home";
-import Challenges from "./Pages/Challenges";
-import Practice from "./Pages/Practice";
-import Portfolio from "./Pages/portfolio";
+import Home from "./Pages/Home/Home";
+import LearningPaths from "./Pages/LearningPaths/LearningPaths";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
   return (
@@ -13,9 +12,8 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/challenges" element={<Challenges />} />
-          <Route path="/practice" element={<Practice />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/learning-paths" element={<LearningPaths />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

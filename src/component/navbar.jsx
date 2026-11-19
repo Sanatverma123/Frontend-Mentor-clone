@@ -45,7 +45,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-white/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-blue-100 shadow-sm">
+    <header className="bg-gradient-to-r from-blue-100 via-white to-sky-100 sticky top-0 z-50 w-full border-b border-blue-100 shadow-sm">
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
 
