@@ -9,7 +9,7 @@ import Portfolio from "./Pages/portfolio";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Frontend-Mentor-clone">
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
