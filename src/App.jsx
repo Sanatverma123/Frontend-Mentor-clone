@@ -5,6 +5,7 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./Pages/Home/Home";
 import LearningPaths from "./Pages/LearningPaths/LearningPaths";
 import Contact from "./Pages/Contact/Contact";
+import Challenges from "./Pages/Challenges/Challenges";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/learning-paths" element={<LearningPaths />} />
+          <Route path="/challenges" element={<Challenges />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
