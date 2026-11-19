@@ -5,7 +5,7 @@ import {
   Phone,
   Send,
 } from "lucide-react";
-
+ import Button from "../../component/Button";
 const locations = [
   {
     name: "New Delhi",
@@ -29,7 +29,7 @@ const locations = [
     name: "Mumbai",
     email: "sanatverma@gmail.com",
     phone: "+91 76963 05328",
-    address: "Mumbai, India",
+    address: "Mumbai, , India",
   },
 ];
 
@@ -189,13 +189,13 @@ const handleSubmit = (e) => {
                   ></textarea>
                 </div>
 
-                <button
+                <Button
                   type="submit"
                   className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 rounded-full shadow-[3px_3px_0px_#172554] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-300"
                 >
                   Send Message
                   <Send size={18} />
-                </button>
+                </Button>
 
               </form>
             </div>

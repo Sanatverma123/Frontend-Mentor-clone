@@ -129,11 +129,11 @@ function Challenges() {
   };
 
   return (
-    <main className="bg-neutral-50 min-h-screen">
+    <main className="bg-gradient-to-br from-blue-50 to-sky-50 min-h-screen">
       {/* BREADCRUMB */}
-      <div className="bg-white border-y border-neutral-200 px-5">
+      <div className="bg-gradient-to-br from-blue-200 via-white to-sky-200 border-y border-blue-200 px-5">
         <div className="max-w-7xl mx-auto">
-          <span className="inline-block border-x border-neutral-200 px-5 py-3 font-bold uppercase tracking-wider">
+          <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold uppercase tracking-wider">
             Challenges
           </span>
         </div>
@@ -141,7 +141,7 @@ function Challenges() {
 
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
         {/* PRO BANNER */}
-        <div className="bg-gray-100 border border-neutral-200 rounded-2xl p-6 flex flex-col md:flex-row justify-between gap-6">
+        <div className="bg-gradient-to-br from-blue-400 via-white to-sky-200 border border-blue-400 rounded-2xl p-6 flex flex-col md:flex-row justify-between gap-6">
           <div className="space-y-4">
             <h2 className="text-xl font-semibold">Unlock full access</h2>
 
@@ -175,9 +175,8 @@ function Challenges() {
             </p>
           </div>
         </div>
-
         PRODUCT ANNOUNCEMENT
-        <div className="bg-teal-50 border border-teal-300 rounded-lg px-4 py-4 flex items-center gap-3">
+        <div className="bg-gradient-to-br from-teal-200 via-white to-teal-200 border border-teal-300 rounded-lg px-4 py-4 flex items-center gap-3">
           <Box className="text-teal-700 shrink-0" size={20} />
           <p className="text-sm text-neutral-600">
             <span className="font-semibold text-neutral-800">
@@ -190,9 +189,7 @@ function Challenges() {
             </a>
           </p>
         </div>
- 
         {/* SEARCH AND FILTER*/}
-        {/*
         <div className="flex flex-col md:flex-row md:justify-between gap-4">
           <div className="relative w-full md:max-w-sm">
             <input
@@ -200,18 +197,18 @@ function Challenges() {
               placeholder="Search challenges..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full border border-neutral-300 bg-white rounded-lg px-4 py-3 pr-10 outline-none focus:border-blue-500"
+              className="w-full border border-neutral-300 bg-sky-100 rounded-lg px-4 py-3 pr-10 outline-none focus:border-blue-500"
             />
             <Search
               size={19}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-500"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"
             />
           </div>
 
           <div className="flex gap-3">
             <button
               onClick={() => setShowFilter(!showFilter)}
-              className="bg-white border border-neutral-300 rounded-lg px-5 py-3 flex items-center justify-center gap-2 hover:bg-gray-100"
+              className="bg-gradient-to-br from-teal-200 via-white to-blue-200 border border-sky-300 rounded-lg px-5 py-3 flex items-center justify-center gap-2 hover:bg-gray-100"
             >
               <Filter size={17} />
               Filter
@@ -220,7 +217,7 @@ function Challenges() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className="bg-white border border-neutral-300 rounded-lg px-4 py-3 outline-none"
+              className=" bg-gradient-to-br from-teal-200 via-white to-sky-200 border border-blue-300 text-black rounded-lg px-4 py-3 outline-none"
             >
               <option>Newest to oldest</option>
               <option>A to Z</option>
@@ -228,35 +225,31 @@ function Challenges() {
             </select>
           </div>
         </div>
-
         {/* FILTER OPTIONS */}
-        {/*
         {showFilter && (
-          <div className="bg-white border border-neutral-200 rounded-xl p-4 flex flex-wrap items-center gap-3">
+          <div className="bg-blue-100 border border-blue-300 rounded-xl p-4 flex flex-wrap items-center gap-3">
             <span className="font-semibold text-sm">Difficulty:</span>
 
             {["All", "Newbie", "Junior", "Intermediate", "Advanced"].map(
               (item) => (
-                <button
+                <Button
                   key={item}
                   onClick={() => setLevel(item)}
                   className={`px-4 py-2 rounded-full text-sm border transition ${
                     level === item
                       ? "bg-blue-600 text-white border-blue-600"
-                      : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+                      : "bg-white text-black border-gray-300 hover:bg-gray-100"
                   }`}
                 >
                   {item}
-                </button>
+                </Button>
               ),
             )}
           </div>
-        )} 
-
+        )}
         {/* RESULT COUNT */}
-        {/*
         <div className="flex flex-wrap justify-between gap-3 text-sm">
-          <p className="text-neutral-500">
+          <p className="text-black">
             Showing {filteredChallenges.length} of 9 challenges
           </p>
 
@@ -270,17 +263,15 @@ function Challenges() {
             </Link>
           </p>
         </div>
-
         {/* CHALLENGE CARDS */}
-        {/*}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredChallenges.map((challenge) => (
             <div
               key={challenge.title}
-              className="bg-white border border-neutral-200 rounded-2xl overflow-hidden relative flex flex-col"
+              className="bg-gradient-to-br from-blue-200 via-white to-sky-200 border border-blue-200 rounded-2xl overflow-hidden relative flex flex-col"
             >
               {/* BADGE */}
-              {/*
+
               <div className="absolute top-3 right-3 z-10">
                 <span
                   className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${
@@ -294,7 +285,7 @@ function Challenges() {
               </div>
 
               {/* IMAGE */}
-              {/*
+
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={challenge.image}
@@ -304,7 +295,7 @@ function Challenges() {
               </div>
 
               {/* CARD CONTENT */}
-              {/*
+
               <div className="p-5 flex flex-col gap-4 flex-grow">
                 <h2 className="text-xl font-semibold text-neutral-900">
                   {challenge.title}
@@ -312,7 +303,7 @@ function Challenges() {
 
                 <div className="flex flex-wrap justify-between items-center gap-3">
                   {/* TECHNOLOGY TAGS */}
-                  {/* <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {challenge.tags.map((tag) => (
                       <span
                         key={tag}
@@ -323,10 +314,10 @@ function Challenges() {
                         {tag}
                       </span>
                     ))}
-                  </div> */}
+                  </div>
 
                   {/* DIFFICULTY */}
-                  {/* <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2">
                     <span
                       className={`w-3 h-3 rounded-sm bg-current ${
                         levelColors[challenge.level]
@@ -345,16 +336,13 @@ function Challenges() {
             </div>
           ))}
         </div>
-
         {filteredChallenges.length === 0 && (
           <p className="text-center text-neutral-500 py-10">
             No challenges found.
           </p>
-        )} */}
-
+        )}
         {/* DISCORD SECTION */}
-        <div>
-        {/* <div className="bg-blue-600 rounded-2xl px-6 py-10 text-center text-white flex flex-col items-center gap-5">
+        <div className=" bg-gradient-to-br from-blue-300 via-white to-sky-200 border border-blue-400 rounded-2xl px-6 py-10 text-center text-black flex flex-col items-center gap-5">
           <h2 className="text-xl font-bold uppercase tracking-widest">
             Join our Discord community
           </h2>
@@ -365,15 +353,14 @@ function Challenges() {
             about all things front-end!
           </p>
 
-          <a
-            href="https://discord.gg/UAfh3qzhYb"
+          <Button
+            href=""
             target="_blank"
             rel="noreferrer"
             className="bg-white text-blue-600 font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition"
           >
             Join our Discord
-          </a> 
-           */}
+          </Button>
         </div>
       </div>
     </main>
