@@ -6,6 +6,7 @@ import Home from "./Pages/Home/Home";
 import LearningPaths from "./Pages/LearningPaths/LearningPaths";
 import Contact from "./Pages/Contact/Contact";
 import Challenges from "./Pages/Challenges/Challenges";
+import Solutions from "./Pages/Solutions/Solutions";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/learning-paths" element={<LearningPaths />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/solutions" element={<Solutions />} />
         </Route>
       </Routes>
     </BrowserRouter>

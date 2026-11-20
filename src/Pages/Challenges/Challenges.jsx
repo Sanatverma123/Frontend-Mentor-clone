@@ -129,9 +129,9 @@ function Challenges() {
   };
 
   return (
-    <main className="bg-gradient-to-br from-blue-50 to-sky-50 min-h-screen">
+    <main className="bg-gradient-to-br from-blue-50 via-white to-sky-50 min-h-screen">
       {/* BREADCRUMB */}
-      <div className="bg-gradient-to-br from-blue-200 via-white to-sky-200 border-y border-blue-200 px-5">
+      <div className="bg-gradient-to-br from-blue-100 via-white to-sky-100 border-y border-blue-200 px-5">
         <div className="max-w-7xl mx-auto">
           <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold uppercase tracking-wider">
             Challenges
@@ -141,7 +141,7 @@ function Challenges() {
 
       <div className="max-w-7xl mx-auto px-5 py-8 space-y-6">
         {/* PRO BANNER */}
-        <div className="bg-gradient-to-br from-blue-400 via-white to-sky-200 border border-blue-400 rounded-2xl p-6 flex flex-col md:flex-row justify-between gap-6">
+        <div className="bg-white border border-blue-200 rounded-2xl p-6 flex flex-col md:flex-row justify-between gap-6">
           <div className="space-y-4">
             <h2 className="text-xl font-semibold">Unlock full access</h2>
 
@@ -176,7 +176,7 @@ function Challenges() {
           </div>
         </div>
         PRODUCT ANNOUNCEMENT
-        <div className="bg-gradient-to-br from-teal-200 via-white to-teal-200 border border-teal-300 rounded-lg px-4 py-4 flex items-center gap-3">
+        <div className="bg-teal-50  border border-teal-200 rounded-lg px-4 py-4 flex items-center gap-3">
           <Box className="text-teal-700 shrink-0" size={20} />
           <p className="text-sm text-neutral-600">
             <span className="font-semibold text-neutral-800">
@@ -197,7 +197,7 @@ function Challenges() {
               placeholder="Search challenges..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full border border-neutral-300 bg-sky-100 rounded-lg px-4 py-3 pr-10 outline-none focus:border-blue-500"
+              className="w-full border border-neutral-300 bg-white rounded-lg px-4 py-3 pr-10 outline-none focus:border-blue-500"
             />
             <Search
               size={19}
@@ -208,7 +208,7 @@ function Challenges() {
           <div className="flex gap-3">
             <button
               onClick={() => setShowFilter(!showFilter)}
-              className="bg-gradient-to-br from-teal-200 via-white to-blue-200 border border-sky-300 rounded-lg px-5 py-3 flex items-center justify-center gap-2 hover:bg-gray-100"
+              className="bg-white border border-sky-200 rounded-lg px-5 py-3 flex items-center justify-center gap-2 hover:bg-gray-100"
             >
               <Filter size={17} />
               Filter
@@ -217,7 +217,7 @@ function Challenges() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className=" bg-gradient-to-br from-teal-200 via-white to-sky-200 border border-blue-300 text-black rounded-lg px-4 py-3 outline-none"
+              className=" bg-white border border-blue-200 text-black rounded-lg px-4 py-3 outline-none"
             >
               <option>Newest to oldest</option>
               <option>A to Z</option>
@@ -268,7 +268,7 @@ function Challenges() {
           {filteredChallenges.map((challenge) => (
             <div
               key={challenge.title}
-              className="bg-gradient-to-br from-blue-200 via-white to-sky-200 border border-blue-200 rounded-2xl overflow-hidden relative flex flex-col"
+              className="bg-white  border border-blue-200 rounded-2xl overflow-hidden relative flex flex-col"
             >
               {/* BADGE */}
 
@@ -342,7 +342,7 @@ function Challenges() {
           </p>
         )}
         {/* DISCORD SECTION */}
-        <div className=" bg-gradient-to-br from-blue-300 via-white to-sky-200 border border-blue-400 rounded-2xl px-6 py-10 text-center text-black flex flex-col items-center gap-5">
+        <div className=" bg-white border border-blue-400 rounded-2xl px-6 py-10 text-center text-black flex flex-col items-center gap-5">
           <h2 className="text-xl font-bold uppercase tracking-widest">
             Join our Discord community
           </h2>
