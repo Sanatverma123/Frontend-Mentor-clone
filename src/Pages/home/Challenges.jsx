@@ -1,4 +1,3 @@
-
 import Card1 from "../../assets/Card1.png";
 import Card2 from "../../assets/Card2.png";
 import Card3 from "../../assets/Card3.png";
@@ -22,9 +21,9 @@ function Challenges() {
       description:
         "Practice form validation and accessibility with this neon gamer sign-up form, featuring a password strength meter, show/hide passwords, and loading and success states.",
       icon: <Code2 size={20} />,
-      tag: "NEW",
-      tagIcon: <Sparkles size={12} />,
-      tagColor: "bg-purple-500 text-white",
+      type: "Free",
+      level: "Junior",
+      tags: ["HTML", "CSS", "JS"],
     },
     {
       image: Card2,
@@ -32,9 +31,9 @@ function Challenges() {
       description:
         "Build and deploy a group polling app where voters need no account, can suggest their own options, and results end in a reveal worth sharing.",
       icon: <Users size={20} />,
-      tag: "Free",
-      tagIcon: <Package size={12} />,
-      tagColor: "bg-sky-500 text-white",
+      type: "Premium",
+      level: "Intermediate",
+      tags: ["HTML", "CSS", "JS"],
     },
     {
       image: Card3,
@@ -42,11 +41,25 @@ function Challenges() {
       description:
         "Build a landing page hero with a 2x2 stats grid, a split headline layout, and a toggleable menu. Practice CSS Grid across breakpoints.",
       icon: <LayoutGrid size={20} />,
-      tag: "PREMIUM",
-      tagIcon: <Crown size={12} />,
-      tagColor: "bg-green-600 text-white",
+      type: "Free",
+      level: "Newbie",
+      tags: ["HTML", "CSS"],
     },
   ];
+
+  const levelColors = {
+    Newbie: "text-cyan-500",
+    Junior: "text-emerald-500",
+    Intermediate: "text-amber-500",
+    Advanced: "text-orange-500",
+  };
+
+  const tagColors = {
+    HTML: "bg-sky-100 text-sky-600",
+    CSS: "bg-amber-100 text-amber-600",
+    JS: "bg-red-100 text-red-600",
+    API: "bg-green-100 text-green-600",
+  };
 
   return (
     <section
@@ -72,57 +85,84 @@ function Challenges() {
       </div>
 
       {/* CHALLENGE CARDS */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-6">
-
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="group min-w-0 bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-3 sm:p-4 md:p-3 lg:p-4 shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300"
+            className="group bg-gradient-to-br from-blue-50 via-white to-sky-100 border border-blue-200 rounded-2xl overflow-hidden relative flex flex-col shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
           >
-            {/* IMAGE */}
-            <div className="relative h-48 sm:h-44 md:h-48 lg:h-48 xl:h-52 overflow-hidden rounded-xl bg-blue-100">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-
+            {/* BADGE */}
+            <div className="absolute top-3 right-3 z-10">
               <span
-                className={`absolute top-3 right-3 inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm ${card.tagColor}`}
+                className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${
+                  card.type === "Free"
+                    ? "bg-blue-100 text-blue-600"
+                    : "bg-blue-600 text-white"
+                }`}
               >
-                {card.tagIcon}
-                {card.tag}
+                {card.type}
               </span>
             </div>
 
-            {/* CARD CONTENT */}
-            <div className="px-1 sm:px-2 pt-4 sm:pt-5 pb-3">
+            {/* IMAGE */}
+            <div className="aspect-[4/3] overflow-hidden bg-blue-100">
+              <img
+                src={card.image}
+                alt={card.title}
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
 
+            {/* CARD CONTENT */}
+            <div className="p-4 sm:p-5 flex flex-col gap-4 flex-grow">
               {/* ICON */}
-              <div className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                 {card.icon}
               </div>
 
               {/* TITLE */}
-              <h3 className="text-lg sm:text-lg md:text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                 {card.title}
               </h3>
 
+              {/* TAGS AND LEVEL */}
+              <div className="flex flex-wrap justify-between items-center gap-3">
+                <div className="flex flex-wrap gap-2">
+                  {card.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className={`px-2 py-1 rounded text-xs font-bold ${tagColors[tag]}`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span
+                    className={`w-3 h-3 rounded-sm bg-current ${levelColors[card.level]}`}
+                  />
+                  <span className="text-xs font-bold uppercase text-slate-800">
+                    {card.level}
+                  </span>
+                </div>
+              </div>
+
               {/* DESCRIPTION */}
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-sm md:text-base">
+              <p className="text-slate-600 text-sm leading-6">
                 {card.description}
               </p>
 
               {/* BUTTON */}
-              <Button className="mt-5 w-full sm:w-auto">
-                Explore Challenge
-                <ArrowUpRight size={16} />
-              </Button>
-
+              <div className="mt-auto pt-2">
+                <Button className="w-full sm:w-auto">
+                  Explore Challenge
+                  <ArrowUpRight size={16} />
+                </Button>
+              </div>
             </div>
           </div>
         ))}
-
       </div>
 
       {/* BROWSE BUTTON */}
@@ -132,7 +172,6 @@ function Challenges() {
           <ArrowUpRight size={16} />
         </Button>
       </div>
-
     </section>
   );
 }
