@@ -28,3 +28,46 @@ h1, h2, h3, h4, h5, h6 {
 button, a {
   cursor: pointer;
 }
+
+
+/* Technologies Page Font Sizes */
+
+.technologies-page h1 {
+  font-size: 52px;
+  font-weight: 500;
+}
+
+.technologies-page h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.technologies-page h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.technologies-page p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .technologies-page h1 {
+    font-size: 36px;
+  }
+
+  .technologies-page h2 {
+    font-size: 24px;
+  }
+
+  .technologies-page h3 {
+    font-size: 20px;
+  }
+
+  .technologies-page p {
+    font-size: 16px;
+  }
+}
+

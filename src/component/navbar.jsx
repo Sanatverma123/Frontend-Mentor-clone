@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 import {
@@ -46,15 +45,23 @@ export default function Navbar() {
 
   return (
     <header className="bg-gradient-to-r from-blue-100 via-white to-sky-100 <nav relative  top-0 z-50 w-full border-b border-blue-100 shadow-sm">
-
+      <div
+        className="bg-blue-500 font-semibold text-center text-white px-5 py-2"
+        style={{
+          backgroundColor: "rgb(23, 23, 23)",
+          color: "rgb(255, 255, 255)",
+        }}
+      >
+        🎉 Black Friday: 30% off Pro yearly, for as long as you're subscribed –{" "}
+        <a className="underline hover:no-underline" href="/pro#plans">
+          Upgrade now
+        </a>
+      </div>
       <div className="max-w-[1440px] mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
-
         {/* NAVBAR */}
         <div className="flex items-center justify-between py-3 md:py-4 lg:py-3">
-
           {/* LOGO AND MENU BUTTON */}
           <div className="flex items-center gap-3 sm:gap-4">
-
             {/* MOBILE + TABLET MENU */}
             <button
               className="lg:hidden text-slate-800 hover:text-blue-600 transition"
@@ -76,23 +83,18 @@ export default function Navbar() {
                 className="w-28 sm:w-32 md:w-36 lg:w-36 h-auto object-contain"
               />
             </Link>
-
           </div>
 
           {/* LAPTOP + DESKTOP NAVBAR */}
           <nav className="hidden lg:flex items-center">
-
             <ul className="flex items-center gap-4 xl:gap-6">
-
               {/* EXPLORE */}
               <li className="relative">
-
                 <button
                   onClick={() => toggleDropdown("explore")}
                   className="flex items-center text-sm font-bold italic uppercase tracking-wide text-slate-800 hover:text-blue-600 transition"
                 >
                   Explore
-
                   <ChevronDown
                     size={17}
                     className={`ml-1.5 transition-transform duration-300 ${
@@ -103,7 +105,6 @@ export default function Navbar() {
 
                 {activeDropdown === "explore" && (
                   <div className="absolute top-full left-0 mt-4 w-52 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
-
                     {exploreItems.map((item) => {
                       const Icon = item.icon;
 
@@ -122,21 +123,17 @@ export default function Navbar() {
                         </Link>
                       );
                     })}
-
                   </div>
                 )}
-
               </li>
 
               {/* FOR COMPANIES */}
               <li className="relative">
-
                 <button
                   onClick={() => toggleDropdown("companies")}
                   className="flex items-center text-sm font-bold italic uppercase tracking-wide text-slate-800 hover:text-blue-600 transition"
                 >
                   For companies
-
                   <ChevronDown
                     size={17}
                     className={`ml-1.5 transition-transform duration-300 ${
@@ -147,7 +144,6 @@ export default function Navbar() {
 
                 {activeDropdown === "companies" && (
                   <div className="absolute top-full left-0 mt-4 w-60 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
-
                     {companyItems.map((item) => {
                       const Icon = item.icon;
 
@@ -166,10 +162,8 @@ export default function Navbar() {
                         </Link>
                       );
                     })}
-
                   </div>
                 )}
-
               </li>
 
               {/* UNLOCK PRO */}
@@ -180,7 +174,6 @@ export default function Navbar() {
                   className="text-sm font-bold italic uppercase tracking-wide text-slate-800 hover:text-blue-600 transition whitespace-nowrap"
                 >
                   Unlock
-
                   <span className="bg-blue-700 text-white text-xs px-2 py-1 rounded-md ml-1.5">
                     Pro
                   </span>
@@ -197,23 +190,19 @@ export default function Navbar() {
                   <ArrowUpRight size={15} />
                 </Button>
               </li>
-
             </ul>
           </nav>
-
         </div>
 
         {/* MOBILE + TABLET MENU */}
         {menuOpen && (
           <div className="lg:hidden flex flex-col gap-2 py-4 md:py-5 border-t border-blue-100">
-
             {/* EXPLORE */}
             <button
               onClick={() => toggleDropdown("explore")}
               className="flex items-center justify-between text-sm md:text-base font-bold uppercase text-slate-800 py-3 hover:text-blue-600 transition"
             >
               Explore
-
               <ChevronDown
                 size={18}
                 className={`transition-transform duration-300 ${
@@ -224,7 +213,6 @@ export default function Navbar() {
 
             {activeDropdown === "explore" && (
               <div className="flex flex-col gap-4 pl-4 py-2 border-l-2 border-blue-200">
-
                 {exploreItems.map((item) => {
                   const Icon = item.icon;
 
@@ -240,7 +228,6 @@ export default function Navbar() {
                     </Link>
                   );
                 })}
-
               </div>
             )}
 
@@ -250,7 +237,6 @@ export default function Navbar() {
               className="flex items-center justify-between text-sm md:text-base font-bold uppercase text-slate-800 py-3 hover:text-blue-600 transition"
             >
               For companies
-
               <ChevronDown
                 size={18}
                 className={`transition-transform duration-300 ${
@@ -261,7 +247,6 @@ export default function Navbar() {
 
             {activeDropdown === "companies" && (
               <div className="flex flex-col gap-4 pl-4 py-2 border-l-2 border-blue-200">
-
                 {companyItems.map((item) => {
                   const Icon = item.icon;
 
@@ -277,7 +262,6 @@ export default function Navbar() {
                     </Link>
                   );
                 })}
-
               </div>
             )}
 
@@ -299,10 +283,8 @@ export default function Navbar() {
                 Log in with GitHub
               </Button>
             </div>
-
           </div>
         )}
-
       </div>
     </header>
   );
