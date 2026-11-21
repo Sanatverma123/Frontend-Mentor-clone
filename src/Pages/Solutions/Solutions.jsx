@@ -1,94 +1,156 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Search, Filter, Check, X, Star, Box } from "lucide-react";
 import Button from "../../component/Button";
+import SolutionCard from "../Solutions/SolutionCard";
 
 const solutions = [
   {
-    title: "Color palette generator",
-     feedbackRequested: true,
+    id: 1,
+    title: "responsive-landing-using-flex-box-pseudo-element",
+    feedbackRequested: true,
+
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/uoubtgw10uyvvcssakdz.jpg",
-    level: "Intermediate",
-    type: "Premium",
-    tags: ["HTML", "CSS", "JS"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "Pavlo",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 40,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
     description:
-      "Practice color math and JavaScript state with this palette generator, featuring five palette types, locked colors, one-click copying, and a live page preview.",
+      "I would appreciate feedback on my CSS structure—specifically how I handled the responsive transition between the......",
   },
   {
-    title: "Gamer sign-up form",
-     feedbackRequested: true,
+    id: 2,
+    title: "article-preview-component-with-share-popover",
+    feedbackRequested: true,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/fx3umtn3qdvwjg6vhwp9.jpg",
-    level: "Junior",
-    type: "Free",
-    tags: ["HTML", "CSS", "JS"],
-    description:
-      "Practice form validation and accessibility with this neon gamer sign-up form, featuring a password strength meter, show/hide passwords, and loading and success states.",
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "Hossam Abdulraouf",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 60,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+    description: "I would love feedback on:",
   },
   {
-    title: "Poll creator app",
-     feedbackRequested: true,
+    id: 3,
+    title: "testimonals-grid",
+    feedbackRequested: true,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/ht5fodpye9a7ktlwobjq.jpg",
-    level: "Intermediate",
-    type: "Premium",
-    tags: ["HTML", "CSS", "JS"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "ASh",
+    profileHref: "/profile/teboho",
+    level: 0,
+    points: 57,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 0,
     description:
-      "Build and deploy a group polling app where voters need no account, can suggest their own options, and results end in a reveal worth sharing.",
+      "Making sure I didn't make any glaring mistakes, or just what I could do differently.",
   },
   {
-    title: "Grid landing page",
-     feedbackRequested: true,
+    title: "responsive-product-preview-card-using-css-flexbox-and-css-grid",
+    feedbackRequested: true,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/yozhh9xzizlyhidy6h19.jpg",
-    level: "Newbie",
-    type: "Free",
-    tags: ["HTML", "CSS"],
-    description:
-      "Build a landing page hero with a 2x2 stats grid, a split headline layout, and a toggleable menu. A great first project for practicing CSS Grid.",
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "Teboho Mosia",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 50,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+    description: "many",
   },
   {
     title: "Restaurant ranking app",
-     feedbackRequested: true,
+    feedbackRequested: true,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/f2isuwy18hozrmkzbkcm.jpg",
-    level: "Intermediate",
-    type: "Premium",
-    tags: ["HTML", "CSS", "JS"],
-    description:
-      "Build a personal restaurant map with honest, comparison-based ranking. Log where you've eaten and rank it head-to-head.",
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "HasSan",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 30,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
+    description: "Questions for feedback:",
   },
   {
-    title: "Expense splitter app",
-     feedbackRequested: true,
+    title: "base-apparel-coming-soon",
+    feedbackRequested: true,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/zjrkg0fsf6k781okaqxs.jpg",
-    level: "Advanced",
-    type: "Premium",
-    tags: ["HTML", "CSS", "JS", "API"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "ahmed attlam Luma",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 250,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
     description:
-      "Build and deploy a group expense splitter with flexible splits, multi-currency support, and clear settlement tracking.",
+      "Of course i need a feedback on my Tailwind using because it's the first time..",
   },
   {
     title: "Hotel booking confirmation page",
     feedbackRequested: false,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/n8pugt33iomsnewxeyld.jpg",
-    level: "Newbie",
-    type: "Free",
-    tags: ["HTML", "CSS", "JS"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "Luisa Escobar",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 10,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
     description:
-      "Practice building a clean and responsive hotel booking confirmation page.",
+      "I would like feedback on improving my JavaScript structure and making the code cleaner and more efficient.....",
   },
   {
     title: "REST Countries API",
     feedbackRequested: false,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/gnbklcap9xovocj7kj6f.jpg",
-    level: "Advanced",
-    type: "Free",
-    tags: ["HTML", "CSS", "JS", "API"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "Teboho Mosia",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 50,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
     description:
       "Build a countries app with search, filtering, detail pages, and a light and dark theme.",
   },
@@ -97,9 +159,17 @@ const solutions = [
     feedbackRequested: false,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/gnani0d8xypzimlq5gpn.jpg",
-    level: "Junior",
-    type: "Free",
-    tags: ["HTML", "CSS", "JS"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "Abdi Abduljebar",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 181,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
     description:
       "This design has some nice layout challenges in it. A perfect training ground to practice your Flexbox and Grid skills.",
   },
@@ -107,9 +177,17 @@ const solutions = [
     title: "Hotel booking confirmation page",
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/n8pugt33iomsnewxeyld.jpg",
-    level: "Newbie",
-    type: "Free",
-    tags: ["HTML", "CSS", "JS"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "Stephen Appah",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 80,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
     description:
       "Practice building a clean and responsive hotel booking confirmation page.",
   },
@@ -117,19 +195,36 @@ const solutions = [
     title: "REST Countries API",
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/z6fscbxarkugtqohzn7s.jpg",
-    level: "Advanced",
-    type: "Free",
-    tags: ["HTML", "CSS", "JS", "API"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "Dmytro Farbun",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 25,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
     description:
       "Build a countries app with search, filtering, detail pages, and a light and dark theme.",
   },
   {
     title: "Fylo dark theme landing page",
+    feedbackRequested: true,
     image:
       "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_475/Screenshots/orklpxznb9ziinfh3ha8.jpg",
-    level: "Junior",
-    type: "Free",
-    tags: ["HTML", "CSS", "JS"],
+
+    href: "/solutions/responsive-landing",
+    avatar: "https://avatars.githubusercontent.com/u/254246394?v=4",
+    author: "SANAT VERMA",
+    profileHref: "/profile/teboho",
+    level: 1,
+    points: 21,
+    submittedAt: "about 10 hours ago",
+    comments: 0,
+    likes: 3,
+
     description:
       "This design has some nice layout challenges in it. A perfect training ground to practice your Flexbox and Grid skills.",
   },
@@ -176,24 +271,34 @@ function Solutions() {
   };
 
   return (
-    <main className="bg-gradient-to-br from-blue-50 via-white to-sky-50 min-h-screen">
+    <main className="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 min-h-screen">
       {/* BREADCRUMB */}
-      <div className="bg-gradient-to-br from-blue-100 via-white to-sky-100 border-y border-blue-200 px-5">
+      <div className="sticky top-0 z-[100] w-full bg-gradient-to-br from-blue-100 via-white to-sky-100 border-y border-blue-200 px-5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold uppercase tracking-wider">
             SOLUTIONS
           </span>
 
-          <div className="flex items-center gap-6 text-sm font-medium text-gray-600">
-            <a href="/solutions" className="text-blue-600 hover:text-blue-800">
-              Solutions
-            </a>
-            <a href="/tags" className="hover:text-blue-600 transition">
-              Tags
-            </a>
-            <a href="/wall-of-fame" className="hover:text-blue-600 transition">
-              Wall of Fame
-            </a>
+          <div className="flex items-center gap-6 text-lg font-medium text-gray-600">
+            <div className="flex items-center gap-6 text-lg font-medium text-gray-600">
+              <Link
+                to="/solutions"
+                className="text-blue-600 hover:underline underline-offset-4">
+                Solutions
+              </Link>
+
+              <Link
+                to="/tags"
+                className="hover:text-blue-600 hover:underline underline-offset-4">             
+                Tags
+              </Link>
+
+              <Link
+                to="/wall"
+                className="hover:text-blue-600 hover:underline underline-offset-4" >
+                Wall of Fame
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -226,54 +331,10 @@ function Solutions() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {(showAll ? displayedSolutions : displayedSolutions.slice(0, 6)).map(
             (solution, index) => (
-              <div
-                key={`${solution.title}-${index}`}
-                className="bg-white border border-blue-200 rounded-2xl overflow-hidden relative flex flex-col"
-              >
-                {/* BADGE */}
-                <div className="absolute top-3 right-3 z-10">
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${
-                      solution.type === "Free"
-                        ? "bg-blue-100 text-blue-500"
-                        : "bg-blue-500 text-white"
-                    }`}
-                  >
-                    {solution.type}
-                  </span>
-                </div>
-
-                {/* IMAGE */}
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={solution.image}
-                    alt={solution.title}
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-
-                {/* CARD CONTENT */}
-                <div className="p-5 flex flex-col gap-4 flex-grow">
-                  <h2 className="text-xl font-semibold text-neutral-900">
-                    {solution.title}
-                  </h2>
-
-                  <div className="flex flex-wrap gap-2">
-                    {solution.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className={`px-2 py-1 rounded text-xs font-bold ${tagColors[tag]}`}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <p className="text-neutral-500 text-sm leading-6">
-                    {solution.description}
-                  </p>
-                </div>
-              </div>
+              <SolutionCard
+                key={solution.id || `${solution.title}-${index}`}
+                solution={solution}
+              />
             ),
           )}
         </div>
