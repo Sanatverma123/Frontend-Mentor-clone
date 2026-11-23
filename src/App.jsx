@@ -8,6 +8,8 @@ import Challenges from "./Pages/Challenges/Challenges";
 import Solutions from "./Pages/Solutions/Solutions";
 import Tags from "./Pages/Solutions/Tags/Tags";
 import Wall from "./Pages/Solutions/WallOfFame/Wall";
+import Articles from "./Pages/Articles/Articles";
+import Guides from "./Pages/Guides/Guides";
 
 function App() {
   return (
@@ -18,8 +20,11 @@ function App() {
           <Route path="/learning-paths" element={<LearningPaths />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/guides" element={<Guides />}/>
 
           {/* Solutions Pages */}
+
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/tags" element={<Tags />} />
           <Route path="/wall" element={<Wall />} />

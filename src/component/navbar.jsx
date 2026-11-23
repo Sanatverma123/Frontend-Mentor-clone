@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+import { useState, useEffect, useRef } from "react";
 
 import {
   Menu,
@@ -20,6 +21,28 @@ import Button from "./Button";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+
+  // Outside click ke liye ref
+  const navbarRef = useRef(null);
+
+  // Dropdown aur mobile menu outside click par close hoga
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target)
+      ) {
+        setActiveDropdown(null);
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleDropdown = (name) => {
     setActiveDropdown((prev) => (prev === name ? null : name));
@@ -44,7 +67,11 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-gradient-to-r from-blue-100 via-white to-sky-100 <nav relative  top-0 z-50 w-full border-b border-blue-100 shadow-sm">
+    <header
+      ref={navbarRef}
+      className="bg-gradient-to-r from-blue-100 via-white to-sky-100 relative top-0 z-50 w-full border-b border-blue-100 shadow-sm"
+    >
+      {/* BLACK FRIDAY BANNER */}
       <div
         className="bg-blue-500 font-semibold text-center text-white px-5 py-2"
         style={{
@@ -57,12 +84,15 @@ export default function Navbar() {
           Upgrade now
         </a>
       </div>
+
       <div className="max-w-[1440px] mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
-        {/* NAVBAR */}
-        <div className="flex items-center justify-between py-3 md:py-4 lg:py-3">
-          {/* LOGO AND MENU BUTTON */}
-          <div className="flex items-center gap-3 sm:gap-4">
-            {/* MOBILE + TABLET MENU */}
+
+        {/* NAVBAR HEADER */}
+        <div className="flex items-center justify-between py-4">
+
+          {/* MOBILE MENU BUTTON + LOGO */}
+          <div className="flex items-center gap-4">
+
             <button
               className="lg:hidden text-slate-800 hover:text-blue-600 transition"
               onClick={() => {
@@ -83,11 +113,13 @@ export default function Navbar() {
                 className="w-28 sm:w-32 md:w-36 lg:w-36 h-auto object-contain"
               />
             </Link>
+
           </div>
 
           {/* LAPTOP + DESKTOP NAVBAR */}
           <nav className="hidden lg:flex items-center">
             <ul className="flex items-center gap-4 xl:gap-6">
+
               {/* EXPLORE */}
               <li className="relative">
                 <button
@@ -190,13 +222,16 @@ export default function Navbar() {
                   <ArrowUpRight size={15} />
                 </Button>
               </li>
+
             </ul>
           </nav>
+
         </div>
 
         {/* MOBILE + TABLET MENU */}
         {menuOpen && (
           <div className="lg:hidden flex flex-col gap-2 py-4 md:py-5 border-t border-blue-100">
+
             {/* EXPLORE */}
             <button
               onClick={() => toggleDropdown("explore")}
@@ -283,8 +318,10 @@ export default function Navbar() {
                 Log in with GitHub
               </Button>
             </div>
+
           </div>
         )}
+
       </div>
     </header>
   );

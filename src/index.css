@@ -71,3 +71,34 @@ button, a {
   }
 }
 
+ /* Guides */
+.guides-heading-small {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 54px;
+}
+
+.guides-heading-main {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.guides-description {
+  font-size: 24px;
+  line-height: 1.4;
+ 
+}
+
+@media (max-width: 768px) {
+  .guides-heading-main {
+    font-size: 32px;
+  }
+
+  .guides-description {
+    font-size: 17px;
+   
+  }
+  
+}
