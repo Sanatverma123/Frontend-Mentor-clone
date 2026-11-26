@@ -1,11 +1,9 @@
-
 import { useState, useEffect, useRef } from "react";
 
 import {
   Menu,
   X,
   ChevronDown,
-  ArrowUpRight,
   Route,
   MonitorSmartphone,
   Code2,
@@ -16,7 +14,8 @@ import {
 
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import Button from "./Button";
+import ThemeToggle from "./ThemeToggle";
+import MockAuth from "./MockAuth";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,10 +27,7 @@ export default function Navbar() {
   // Dropdown aur mobile menu outside click par close hoga
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        navbarRef.current &&
-        !navbarRef.current.contains(event.target)
-      ) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setActiveDropdown(null);
         setMenuOpen(false);
       }
@@ -69,7 +65,7 @@ export default function Navbar() {
   return (
     <header
       ref={navbarRef}
-      className="bg-gradient-to-r from-blue-100 via-white to-sky-100 relative top-0 z-50 w-full border-b border-blue-100 shadow-sm"
+      className="bg-gradient-to-r from-blue-100 via-white to-sky-100 relative dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 top-0 z-50 w-full border-b border-blue-100 shadow-sm"
     >
       {/* BLACK FRIDAY BANNER */}
       <div
@@ -86,15 +82,12 @@ export default function Navbar() {
       </div>
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
-
         {/* NAVBAR HEADER */}
         <div className="flex items-center justify-between py-4">
-
           {/* MOBILE MENU BUTTON + LOGO */}
           <div className="flex items-center gap-4">
-
             <button
-              className="lg:hidden text-slate-800 hover:text-blue-600 transition"
+              className="lg:hidden text-slate-800 dark:text-slate-100 hover:text-blue-600 transition"
               onClick={() => {
                 setMenuOpen(!menuOpen);
                 setActiveDropdown(null);
@@ -113,18 +106,16 @@ export default function Navbar() {
                 className="w-28 sm:w-32 md:w-36 lg:w-36 h-auto object-contain"
               />
             </Link>
-
           </div>
 
           {/* LAPTOP + DESKTOP NAVBAR */}
           <nav className="hidden lg:flex items-center">
             <ul className="flex items-center gap-4 xl:gap-6">
-
               {/* EXPLORE */}
               <li className="relative">
                 <button
                   onClick={() => toggleDropdown("explore")}
-                  className="flex items-center text-sm font-bold italic uppercase tracking-wide text-slate-800 hover:text-blue-600 transition"
+                  className="flex items-center text-sm font-bold italic uppercase tracking-wide text-slate-800 dark:text-slate-100 hover:text-blue-600 transition"
                 >
                   Explore
                   <ChevronDown
@@ -136,7 +127,7 @@ export default function Navbar() {
                 </button>
 
                 {activeDropdown === "explore" && (
-                  <div className="absolute top-full left-0 mt-4 w-52 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+                  <div className="absolute top-full left-0 mt-4 w-52 bg-white dark:bg-black rounded-xl shadow-lg border border-slate-200 dark:border-blue-900 overflow-hidden">
                     {exploreItems.map((item) => {
                       const Icon = item.icon;
 
@@ -145,11 +136,11 @@ export default function Navbar() {
                           key={item.title}
                           to={item.path}
                           onClick={closeMenus}
-                          className="flex items-center gap-3 px-5 py-4 border-b border-slate-200 last:border-0 hover:bg-slate-50 transition"
+                          className="flex items-center gap-3 px-5 py-4 border-b border-slate-200 dark:border-blue-900 last:border-0 hover:bg-slate-50 dark:hover:bg-slate-900 transition"
                         >
-                          <Icon size={23} className="text-black shrink-0" />
+                          <Icon size={23} className="text-black dark:text-white shrink-0" />
 
-                          <span className="text-sm font-bold italic uppercase text-slate-900 whitespace-nowrap">
+                          <span className="text-sm font-bold italic uppercase text-slate-900 dark:text-slate-100 whitespace-nowrap">
                             {item.title}
                           </span>
                         </Link>
@@ -163,7 +154,7 @@ export default function Navbar() {
               <li className="relative">
                 <button
                   onClick={() => toggleDropdown("companies")}
-                  className="flex items-center text-sm font-bold italic uppercase tracking-wide text-slate-800 hover:text-blue-600 transition"
+                  className="flex items-center text-sm font-bold italic uppercase tracking-wide text-slate-800 dark:text-slate-100 hover:text-blue-600 transition"
                 >
                   For companies
                   <ChevronDown
@@ -175,7 +166,7 @@ export default function Navbar() {
                 </button>
 
                 {activeDropdown === "companies" && (
-                  <div className="absolute top-full left-0 mt-4 w-60 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+                  <div className="absolute top-full left-0 mt-4 w-60 bg-white dark:bg-black rounded-xl shadow-lg border border-slate-200 dark:border-blue-900 overflow-hidden">
                     {companyItems.map((item) => {
                       const Icon = item.icon;
 
@@ -184,11 +175,11 @@ export default function Navbar() {
                           key={item.title}
                           to={item.path}
                           onClick={closeMenus}
-                          className="flex items-center gap-3 px-5 py-4 border-b border-slate-200 last:border-0 hover:bg-slate-50 transition"
+                          className="flex items-center gap-3 px-5 py-4 border-b border-slate-200 dark:border-blue-900 last:border-0 hover:bg-slate-50 dark:hover:bg-slate-800 transition"
                         >
-                          <Icon size={23} className="text-black shrink-0" />
+                          <Icon size={23} className="text-black dark:text-white shrink-0" />
 
-                          <span className="text-sm font-bold italic uppercase text-slate-900">
+                          <span className="text-sm font-bold italic uppercase text-slate-900 dark:text-slate-200">
                             {item.title}
                           </span>
                         </Link>
@@ -203,7 +194,7 @@ export default function Navbar() {
                 <Link
                   to="/portfolio"
                   onClick={closeMenus}
-                  className="text-sm font-bold italic uppercase tracking-wide text-slate-800 hover:text-blue-600 transition whitespace-nowrap"
+                  className="text-sm font-bold italic uppercase tracking-wide text-slate-800 dark:text-slate-100 hover:text-blue-600 transition whitespace-nowrap"
                 >
                   Unlock
                   <span className="bg-blue-700 text-white text-xs px-2 py-1 rounded-md ml-1.5">
@@ -212,30 +203,25 @@ export default function Navbar() {
                 </Link>
               </li>
 
-              {/* GITHUB BUTTON */}
               <li>
-                <Button
-                  href="https://github.com/login"
-                  className="text-xs uppercase tracking-wide whitespace-nowrap"
-                >
-                  Log in with GitHub
-                  <ArrowUpRight size={15} />
-                </Button>
+                <MockAuth />
+              </li>
+
+              <li>
+                <ThemeToggle />
               </li>
 
             </ul>
           </nav>
-
         </div>
 
         {/* MOBILE + TABLET MENU */}
         {menuOpen && (
           <div className="lg:hidden flex flex-col gap-2 py-4 md:py-5 border-t border-blue-100">
-
             {/* EXPLORE */}
             <button
               onClick={() => toggleDropdown("explore")}
-              className="flex items-center justify-between text-sm md:text-base font-bold uppercase text-slate-800 py-3 hover:text-blue-600 transition"
+              className="flex items-center justify-between text-sm md:text-base font-bold uppercase text-slate-800  dark:text-slate-100 py-3 hover:text-blue-600 transition"
             >
               Explore
               <ChevronDown
@@ -269,7 +255,7 @@ export default function Navbar() {
             {/* FOR COMPANIES */}
             <button
               onClick={() => toggleDropdown("companies")}
-              className="flex items-center justify-between text-sm md:text-base font-bold uppercase text-slate-800 py-3 hover:text-blue-600 transition"
+              className="flex items-center justify-between text-sm md:text-base font-bold uppercase text-slate-800 dark:text-slate-100 py-3 hover:text-blue-600 transition"
             >
               For companies
               <ChevronDown
@@ -304,24 +290,18 @@ export default function Navbar() {
             <Link
               to="/portfolio"
               onClick={closeMenus}
-              className="text-sm md:text-base font-bold uppercase text-slate-800 py-3 hover:text-blue-600 transition"
+              className="text-sm md:text-base font-bold uppercase text-slate-800 dark:text-slate-100 py-3 hover:text-blue-600 transition"
             >
               Unlock Pro
             </Link>
 
-            {/* GITHUB BUTTON */}
-            <div className="pt-2">
-              <Button
-                href="https://github.com/login"
-                className="w-full justify-center md:w-auto"
-              >
-                Log in with GitHub
-              </Button>
-            </div>
+            <MockAuth />
 
+            <li>
+              <ThemeToggle />
+            </li>
           </div>
         )}
-
       </div>
     </header>
   );

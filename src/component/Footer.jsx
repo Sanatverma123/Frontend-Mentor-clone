@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer
       id="about"
-      className="bg-gradient-to-br from-blue-50 via-white to-sky-50 text-slate-900 border-t border-blue-200"
+      className="bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 text-slate-900 dark:text-slate-200 border-t border-blue-200"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 py-10 sm:py-12 md:py-14 lg:py-16">
         {/* FOOTER CONTENT */}
@@ -16,7 +16,7 @@ function Footer() {
               <span className="text-blue-600">Stay up to date</span>
             </h2>
 
-            <p className="text-sm sm:text-base text-slate-600 mt-3 max-w-sm leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-200 mt-3 max-w-sm leading-relaxed">
               With new challenges, featured solutions, selected articles, and
               our latest news.
             </p>
@@ -46,11 +46,11 @@ function Footer() {
 
           {/* FRONTEND MENTOR */}
           <div>
-            <h3 className="font-extrabold text-slate-900 mb-4 text-sm sm:text-base">
+            <h3 className="font-extrabold text-slate-900 dark:text-slate-100 mb-4 text-sm sm:text-base">
               Frontend Mentor
             </h3>
 
-            <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600">
+            <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
               <a href="#" className="hover:text-blue-600 transition">
                 Unlock Pro
               </a>
@@ -76,11 +76,11 @@ function Footer() {
 
           {/* EXPLORE */}
           <div>
-            <h3 className="font-extrabold text-slate-900 mb-4 text-sm sm:text-base">
+            <h3 className="font-extrabold text-slate-900 dark:text-slate-100 mb-4 text-sm sm:text-base">
               Explore
             </h3>
 
-            <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600">
+            <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
               <Link to="/challenges" className="hover:text-blue-600 transition">
                 Challenges
               </Link>
@@ -98,11 +98,11 @@ function Footer() {
 
           {/* COMMUNITY */}
           <div>
-            <h3 className="font-extrabold text-slate-900 mb-4 text-sm sm:text-base">
+            <h3 className="font-extrabold text-slate-900 dark:text-slate-100 mb-4 text-sm sm:text-base">
               Community
             </h3>
 
-            <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600">
+            <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
               <a href="#" className="hover:text-blue-600 transition">
                 Discord
               </a>
@@ -114,11 +114,11 @@ function Footer() {
 
           {/* COMPANIES */}
           <div>
-            <h3 className="font-extrabold text-slate-900 mb-4 text-sm sm:text-base">
+            <h3 className="font-extrabold text-slate-900 dark:text-slate-100 mb-4 text-sm sm:text-base">
               For companies
             </h3>
 
-            <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600">
+            <div className="flex flex-col gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
               <a href="#" className="hover:text-blue-600 transition">
                 Hire developers
               </a>
@@ -130,7 +130,7 @@ function Footer() {
         </div>
 
         {/* COPYRIGHT */}
-        <div className="border-t border-blue-200 mt-8 sm:mt-10 md:mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-slate-500">
+        <div className="border-t border-blue-200 mt-8 sm:mt-10 md:mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
           <p className="text-center md:text-left">
             © Frontend Mentor 2019 - 2026
           </p>

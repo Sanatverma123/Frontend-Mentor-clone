@@ -14,14 +14,14 @@ function GetFeedback() {
       {/* HEADING */}
       <div className="flex flex-col gap-4 items-center text-center mb-8 sm:mb-10 md:mb-12">
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 leading-snug max-w-[38rem]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 dark:text-slate-100 leading-snug max-w-[38rem]">
           Get feedback on every solution with{" "}
           <span className="inline-block bg-blue-600 px-2 py-1 rounded-lg text-white uppercase">
             Pro
           </span>
         </h2>
 
-        <p className="text-sm sm:text-base md:text-base text-slate-500 max-w-2xl leading-relaxed">
+        <p className="text-sm sm:text-base md:text-base text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
           Get a review on every solution, then re-run it after each round
           of fixes until you’re happy with your code.
         </p>

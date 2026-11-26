@@ -45,11 +45,11 @@ function Community() {
       <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-8 sm:mb-10 md:mb-12 gap-5 md:gap-6">
 
         <div className="w-full text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 dark:text-slate-100 leading-tight">
             A little from our community
           </h2>
 
-          <p className="mt-3 text-sm sm:text-base md:text-base text-slate-500 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base md:text-base text-slate-500 dark:text-slate-300 leading-relaxed">
             See what developers are saying about their journey.
           </p>
 

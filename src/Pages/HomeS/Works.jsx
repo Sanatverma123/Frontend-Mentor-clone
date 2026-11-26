@@ -10,7 +10,7 @@ function Works() {
 
       {/* HEADING */}
       <div className="text-center mb-7 sm:mb-9 md:mb-10">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-slate-900">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-slate-900 dark:text-slate-100">
           How it works
         </h2>
 

@@ -14,7 +14,8 @@ import Challenges from "./Challenges";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 transition-colors duration-300">
+    
       <HeroSection />
       <UnlokPro />
       <Challenges />

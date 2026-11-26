@@ -4,12 +4,12 @@ import Button from "../../component/Button";
 
 function Practice() {
   return (
-    <section className="bg-white py-8 sm:py-10 md:py-12 lg:py-16">
+    <section className=" py-8 sm:py-10 md:py-12 lg:py-16">
 
       {/* HEADING */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 text-center">
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 dark:text-slate-100 leading-tight">
           Two ways to practice
         </h2>
 

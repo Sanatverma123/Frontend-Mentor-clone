@@ -4,7 +4,7 @@ import Button from "../../component/Button";
 
 function HeroSection() {
   return (
-    <section className="bg-gradient-to-br from-blue-50 via-white to-sky-50 overflow-hidden">
+    <section className="overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 py-10 sm:py-12 md:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-8 lg:gap-12 items-center">
 
@@ -15,12 +15,12 @@ function HeroSection() {
             For learners
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-slate-900 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-slate-900 dark:text-slate-100 leading-tight">
             Get seriously good at building for the{" "}
             <span className="text-blue-600">web.</span>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 mt-4 sm:mt-5 leading-relaxed max-w-xl mx-auto md:mx-0">
+          <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 dark:text-slate-300 mt-4 sm:mt-5 leading-relaxed max-w-xl mx-auto md:mx-0">
             Practice on real projects from professional designs and product
             specs, by hand at first, then with AI agents. Get an AI code review
             and feedback from other developers as you go.

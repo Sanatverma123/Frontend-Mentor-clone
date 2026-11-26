@@ -1,11 +1,16 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 * {
   box-sizing: border-box;
 }
+
+/* =========================
+   GLOBAL
+========================= */
 
 html {
   scroll-behavior: smooth;
@@ -15,22 +20,35 @@ body {
   margin: 0;
   font-family: 'Assistant', sans-serif;
   background: #f8fafc;
+  color: #0f172a;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Dark Mode Global */
+
+html.dark body {
+  background: #111827;
+  color: #f1f5f9;
+}
+
+/* Headings */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Manrope', sans-serif;
-  
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.7px;
 }
 
+/* Buttons and Links */
+
 button, a {
   cursor: pointer;
 }
 
-
-/* Technologies Page Font Sizes */
+/* =========================
+   TECHNOLOGIES PAGE
+========================= */
 
 .technologies-page h1 {
   font-size: 52px;
@@ -52,7 +70,55 @@ button, a {
   line-height: 1.7;
 }
 
-/* Mobile Responsive */
+/* Technologies Dark Mode */
+
+html.dark .technologies-page {
+  background-color: #111827;
+  color: #f1f5f9;
+}
+
+html.dark .technologies-page h1,
+html.dark .technologies-page h2,
+html.dark .technologies-page h3 {
+  color: #f8fafc;
+}
+
+html.dark .technologies-page p {
+  color: #cbd5e1;
+}
+
+html.dark .technologies-page .bg-white {
+  background-color: #1f2937;
+}
+
+html.dark .technologies-page .bg-gray-50 {
+  background-color: #111827;
+}
+
+html.dark .technologies-page .bg-gray-100 {
+  background-color: #1f2937;
+}
+
+html.dark .technologies-page .text-gray-900 {
+  color: #f9fafb;
+}
+
+html.dark .technologies-page .text-gray-700 {
+  color: #d1d5db;
+}
+
+html.dark .technologies-page .text-gray-600,
+html.dark .technologies-page .text-gray-500 {
+  color: #9ca3af;
+}
+
+html.dark .technologies-page .border-gray-200,
+html.dark .technologies-page .border-gray-300 {
+  border-color: #374151;
+}
+
+/* Technologies Mobile */
+
 @media (max-width: 640px) {
   .technologies-page h1 {
     font-size: 36px;
@@ -71,7 +137,10 @@ button, a {
   }
 }
 
- /* Guides */
+/* =========================
+   GUIDES PAGE
+========================= */
+
 .guides-heading-small {
   font-size: 20px;
   font-weight: 700;
@@ -88,8 +157,56 @@ button, a {
 .guides-description {
   font-size: 24px;
   line-height: 1.4;
- 
 }
+
+/* Guides Dark Mode */
+
+html.dark .guides-page {
+  background: #111827;
+  color: #f1f5f9;
+}
+
+html.dark .guides-page h1,
+html.dark .guides-page h2,
+html.dark .guides-page h3 {
+  color: #f8fafc;
+}
+
+html.dark .guides-page p {
+  color: #cbd5e1;
+}
+
+html.dark .guides-page .bg-white {
+  background: #1f2937;
+}
+
+html.dark .guides-page .bg-gray-50 {
+  background: #111827;
+}
+
+html.dark .guides-page .bg-gray-100 {
+  background: #1f2937;
+}
+
+html.dark .guides-page .text-gray-900 {
+  color: #f9fafb;
+}
+
+html.dark .guides-page .text-gray-700 {
+  color: #d1d5db;
+}
+
+html.dark .guides-page .text-gray-500,
+html.dark .guides-page .text-gray-600 {
+  color: #9ca3af;
+}
+
+html.dark .guides-page .border-gray-200,
+html.dark .guides-page .border-gray-300 {
+  border-color: #374151;
+}
+
+/* Guides Mobile */
 
 @media (max-width: 768px) {
   .guides-heading-main {
@@ -98,7 +215,5 @@ button, a {
 
   .guides-description {
     font-size: 17px;
-   
   }
-  
 }

@@ -12,7 +12,7 @@ function Choose() {
     >
       {/* HEADING */}
       <div className="text-center mb-8 sm:mb-10 md:mb-12">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 dark:text-slate-100 leading-tight">
           Why Developers Choose Frontend Mentor
         </h2>
 

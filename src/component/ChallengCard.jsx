@@ -4,7 +4,7 @@ import Button from "./Button";
 export default function ChallengeCard({ card, tagColors, levelColors })
  {
   return (
-    <div className="group bg-gradient-to-br from-blue-50 via-white to-sky-100 border border-blue-200 rounded-2xl overflow-hidden relative flex flex-col shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+    <div className="group bg-gradient-to-br from-blue-50 via-white to-sky-100  border border-blue-200 dark:border-blue-600 rounded-2xl overflow-hidden relative flex flex-col shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
       {/* Image */}
       <img
         src={card.image}
@@ -17,9 +17,9 @@ export default function ChallengeCard({ card, tagColors, levelColors })
         <span className="text-xs font-bold">{card.type}</span>
 
         {/* Icon and Title */}
-        <div className="flex items-center gap-2 mt-3">
+        <div className="flex  items-center gap-2 mt-3">
           {card.icon}
-          <h3 className="text-xl font-bold">{card.title}</h3>
+          <h3 className="text-xl ark:text-slate-100 font-bold">{card.title}</h3>
         </div>
 
         <div className="flex items-center justify-between mt-3">
@@ -38,12 +38,12 @@ export default function ChallengeCard({ card, tagColors, levelColors })
           {/* Level */}
           <div className="flex items-center gap-2">
             <span className={`w-3 h-3 rounded-sm ${levelColors[card.level]}`}></span>
-            <span className="text-black text-sm font-medium">{card.level}</span>
+            <span className="text-black ark:text-slate-200 text-sm font-medium">{card.level}</span>
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-sm mt-3">{card.description}</p>
+        <p className="text-sm ark:text-slate-300 mt-3">{card.description}</p>
 
         {/* Button */}
         <Button>

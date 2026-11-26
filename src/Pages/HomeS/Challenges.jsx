@@ -9,9 +9,7 @@ import {
   Code2,
   Users,
   LayoutGrid,
-  Sparkles,
-  Package,
-  Crown,
+ 
 } from "lucide-react";
 
 function Challenges() {
@@ -62,9 +60,10 @@ const levelColors = {
   };
 
   return (
+    
     <section
       id="challenges"
-      className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 py-10 sm:py-12 md:py-14 lg:py-16"
+      className=" max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 py-10 sm:py-12 md:py-14 lg:py-16 "
     >
       {/* HEADING */}
       <div className="text-center mb-8 sm:mb-10 md:mb-12">
@@ -72,16 +71,16 @@ const levelColors = {
           Our Challenges
         </span>
 
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-slate-900 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold text-slate-900 dark:text-slate-100 leading-tight">
           Our latest challenges
         </h2>
 
-        <p className="mt-3 text-sm sm:text-base md:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-3 text-sm sm:text-base md:text-base text-slate-500 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
           Build real skills with hands-on projects and improve your frontend
           development journey.
         </p>
 
-        <div className="w-16 h-1 bg-blue-500 rounded-full mx-auto mt-5"></div>
+        <div className="w-16 h-1 bg-blue-500 dark:bg-blue-800  rounded-full mx-auto mt-5"></div>
       </div>
 
       {/* CHALLENGE CARDS */}
@@ -104,6 +103,7 @@ const levelColors = {
         </Button>
       </div>
     </section>
+    
   );
 }
 

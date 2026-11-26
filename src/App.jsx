@@ -10,9 +10,11 @@ import Tags from "./Pages/Solutions/Tags/Tags";
 import Wall from "./Pages/Solutions/WallOfFame/Wall";
 import Articles from "./Pages/Articles/Articles";
 import Guides from "./Pages/Guides/Guides";
+
 function App() {
   return (
     <BrowserRouter basename="/Frontend-Mentor-clone">
+        
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
@@ -29,6 +31,7 @@ function App() {
           <Route path="/wall" element={<Wall />} />
         </Route>
       </Routes>
+
     </BrowserRouter>
   );
 }
