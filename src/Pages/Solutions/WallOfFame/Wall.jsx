@@ -20,15 +20,15 @@ function WallOfFame() {
   };
 
   return (
-    <main className="flex flex-col grow bg-white">
+    <main className="flex flex-col grow relative bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 ">
       {/* Solutions Navigation */}
-      <div className="bg-neutral-50 border-y border-neutral-200 px-5">
+      <div className="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 border-y border-neutral-200 px-5">
         <div className="max-w-7xl mx-auto flex items-center">
-          <span className="border-x border-neutral-200 font-bold font-secondary tracking-wider px-5 py-3 uppercase">
+          <span className="border-x border-neutral-200 font-bold font-secondary dark:text-white tracking-wider px-5 py-3 uppercase">
             Solutions
           </span>
 
-          <div className="ml-auto flex gap-5 items-center overflow-x-auto p-3">
+          <div className="ml-auto flex gap-5 items-center overflow-x-auto p-3 dark:text-gray-300">
             <Link
               to="/solutions"
               className="font-secondary whitespace-nowrap hover:text-blue-500"
@@ -55,7 +55,7 @@ function WallOfFame() {
 
       <div className="flex flex-col gap-8 px-5 py-6">
         {/* Heading and Timeframe */}
-        <div className="max-w-7xl w-full mx-auto flex flex-col gap-5">
+        <div className="max-w-7xl w-full mx-auto flex flex-col dark:text-gray-200 gap-5">
           <div className="flex flex-col gap-5 w-full sm:flex-row sm:items-center sm:justify-between">
             {/* Heading */}
             <h1 className="font-secondary text-xl md:text-2xl whitespace-nowrap">
@@ -108,7 +108,7 @@ function WallOfFame() {
 
         {/* Discord Banner */}
 
-        <div className="max-w-7xl w-full mx-auto bg-blue-800  rounded-xl px-5 py-10 flex flex-col gap-6 items-center text-center text-white">
+        <div className="max-w-7xl w-full mx-auto bg-blue-900 dark:bg-blue-950 rounded-xl px-5 py-10 flex flex-col gap-6 items-center text-center text-white">
           <h2 className="font-bold uppercase tracking-widest text-xl">
             Join our Discord community
           </h2>

@@ -132,10 +132,10 @@ function Technologies() {
   );
 
   return (
-    <main className="technologies-page relative bg-gradient-to-br from-blue-50 via-white to-sky-50 min-h-screen">
-      <div className=" w-full bg-gradient-to-br from-blue-100 via-white to-sky-100 border-y border-blue-200 px-5">
+    <main className="technologies-page relative bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 min-h-screen">
+      <div className=" w-full bg-gradient-to-br from-blue-100 via-white to-sky-100 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 border-y border-blue-200 px-5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold uppercase tracking-wider">
+          <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold dark:text-white uppercase tracking-wider">
             SOLUTIONS
           </span>
 
@@ -170,18 +170,18 @@ function Technologies() {
         {/* <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 px-5 py-8"> */}
         {/* Heading */}
         <div className="flex flex-col gap-6 py-8 mb-20 items-center text-center">
-          <h1 className="font-secondary text-3xl tablet:text-5xl max-w-[theme(containerWidth.lg)] text-blue-900">
+          <h1 className="font-secondary text-3xl tablet:text-5xl max-w-[theme(containerWidth.lg)] text-blue-900 dark:text-blue-400">
             Technologies
           </h1>
 
-          <p className="max-w-prose text-lg text-neutral-500">
+          <p className="max-w-prose text-lg text-neutral-500 dark:text-neutral-200">
             Find out what a technology does, then practice it on real projects.
           </p>
         </div>
 
         {/* Technology Guides */}
         <section className="flex flex-col gap-6 ">
-          <h2 className="font-secondary text-xl tablet:text-2xl">
+          <h2 className="font-secondary dark:text-white text-xl tablet:text-2xl">
             Technology guides
           </h2>
 
@@ -200,7 +200,7 @@ function Technologies() {
         {/* All Tags */}
         <section className="flex flex-col gap-6">
           <div className="flex flex-row items-center justify-between gap-5">
-            <h2 className="font-secondary text-xl tablet:text-2xl whitespace-nowrap">
+            <h2 className="font-secondary dark:text-neutral-300 text-xl tablet:text-2xl whitespace-nowrap">
               All tags
             </h2>
 

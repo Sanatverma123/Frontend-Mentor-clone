@@ -58,9 +58,10 @@ export default function Navbar() {
   ];
 
   const companyItems = [
-    { title: "Train Developers", icon: Users, path: "/practice" },
-    { title: "Hire Developers", icon: Users, path: "/practice" },
+    { title: "Train Developers", icon: Users, path: "/train-devloper" },
+    { title: "Hire Developers", icon: Users, path: "/hire-developers" },
   ];
+ 
 
   return (
     <header

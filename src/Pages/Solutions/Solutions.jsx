@@ -271,16 +271,16 @@ function Solutions() {
   };
 
   return (
-    <main className="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 min-h-screen">
+   <main className="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 min-h-screen transition-colors duration-300">
       {/* BREADCRUMB */}
-      <div className="sticky top-0 z-[100] w-full bg-gradient-to-br from-blue-100 via-white to-sky-100 border-y border-blue-200 px-5">
+      <div className="sticky top-0 z-[100] w-full bg-gradient-to-br from-blue-100 via-white to-sky-100 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 border-y border-blue-200 px-5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold uppercase tracking-wider">
+          <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold dark:text-slate-100 uppercase tracking-wider">
             SOLUTIONS
           </span>
 
-          <div className="flex items-center gap-6 text-lg font-medium text-gray-600">
-            <div className="flex items-center gap-6 text-lg font-medium text-gray-600">
+          <div className="flex items-center gap-6 text-lg font-medium text-gray-600 dark:text-gray-200">
+            <div className="flex items-center gap-6 text-lg font-medium text-gray-600 dark:text-gray-200">
               <Link
                 to="/solutions"
                 className="text-blue-600 hover:underline underline-offset-4">

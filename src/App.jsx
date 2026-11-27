@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "motion/react";
 
 import MainLayout from "./layouts/MainLayout";
 import Home from "./Pages/HomeS/Home";
@@ -11,27 +12,93 @@ import Wall from "./Pages/Solutions/WallOfFame/Wall";
 import Articles from "./Pages/Articles/Articles";
 import Guides from "./Pages/Guides/Guides";
 
+import ThemeToggle from "./component/ThemeToggle";
+import Homehir from "./Pages/ForCompanies/HireDevloper/Homehir.jsx";
+
+function AnimatedPage({ children }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -15 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function AppRoutes() {
+  const location = useLocation();
+
+  return (
+    <>
+      {/* Global Theme Toggle */}
+     
+
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route element={<MainLayout />}>
+            <Route
+              path="/"
+              element={<AnimatedPage><Home /></AnimatedPage>}
+            />
+
+            <Route
+              path="/learning-paths"
+              element={<AnimatedPage><LearningPaths /></AnimatedPage>}
+            />
+
+            <Route
+              path="/challenges"
+              element={<AnimatedPage><Challenges /></AnimatedPage>}
+            />
+
+            <Route
+              path="/contact"
+              element={<AnimatedPage><Contact /></AnimatedPage>}
+            />
+
+            <Route
+              path="/articles"
+              element={<AnimatedPage><Articles /></AnimatedPage>}
+            />
+
+            <Route
+              path="/guides"
+              element={<AnimatedPage><Guides /></AnimatedPage>}
+            />
+
+            {/* Solutions Pages */}
+
+            <Route
+              path="/solutions"
+              element={<AnimatedPage><Solutions /></AnimatedPage>}
+            />
+
+            <Route
+              path="/tags"
+              element={<AnimatedPage><Tags /></AnimatedPage>}
+            />
+
+            <Route
+              path="/wall"
+              element={<AnimatedPage><Wall /></AnimatedPage>}
+            />
+          </Route>
+          <Route
+            path="/hire-developers"
+            element={<AnimatedPage><Homehir /></AnimatedPage>}/>
+        </Routes>
+      </AnimatePresence>
+    </>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter basename="/Frontend-Mentor-clone">
-        
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/learning-paths" element={<LearningPaths />} />
-          <Route path="/challenges" element={<Challenges />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/guides" element={<Guides />}/>
-         
-          {/* Solutions Pages */}
-
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/tags" element={<Tags />} />
-          <Route path="/wall" element={<Wall />} />
-        </Route>
-      </Routes>
-
+      <AppRoutes />
     </BrowserRouter>
   );
 }

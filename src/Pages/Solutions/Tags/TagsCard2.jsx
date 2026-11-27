@@ -3,7 +3,7 @@ import Button from "../../../component/Button";
 
 function TagsCard2({ tag, description, onFollow, isFollowing = false }) {
   return (
-    <div className="bg-white border border-neutral-200 isolate relative rounded-2xl w-full flex flex-col gap-4 items-start p-5">
+    <div className="!bg-white border border-neutral-200 isolate relative rounded-2xl w-full flex flex-col gap-4 items-start p-5">
 
       {/* TAG NAME */}
       <span className="font-secondary font-semibold text-lg">
@@ -16,7 +16,7 @@ function TagsCard2({ tag, description, onFollow, isFollowing = false }) {
       </span>
 
       {/* DIVIDER */}
-      <span className="bg-neutral-200 border-none h-[1px] min-h-[1px] w-full"></span>
+      <span className=" bg-neutral-200 border-none h-[1px] min-h-[1px] w-full"></span>
 
       {/* FOLLOW BUTTON */}
       <div className="flex flex-wrap gap-x-1 gap-y-3 justify-between w-full">

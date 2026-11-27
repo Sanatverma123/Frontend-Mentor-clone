@@ -92,18 +92,19 @@ const learningPaths = [
 
 function LearningPaths() {
   return (
-    <main className="bg-gradient-to-br from-blue-100 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 min-h-screen transition-colors duration-300">
+    
+    <main className="bg-gradient-to-br from-blue-100 via-white to-sky-50 min-h-screen transition-colors duration-300">
       {/* BREADCRUMB */}
-      <div className="bg-blue-50 border-b border-t border-blue-200 px-4 sm:px-5">
+      <div className="bg-blue-50 dark:bg-slate-900 border-b border-t border-blue-200 px-4 sm:px-5">
         <div className="max-w-7xl mx-auto flex items-center">
-          <span className="border-l border-r border-blue-100 flex items-center font-bold tracking-wider px-5 py-3 uppercase text-xs sm:text-sm">
+          <span className="border-l border-r border-blue-100 dark:border-blue-800 flex items-center font-bold tracking-wider px-5 py-3 uppercase text-xs dark:text-slate-100 sm:text-sm">
             Learning paths
           </span>
         </div>
       </div>
 
       {/* HERO SECTION */}
-      <section className="relative bg-blue-50 overflow-hidden pt-7 sm:pt-10 md:pt-12 px-4 sm:px-5">
+      <section className="relative bg-blue-50 dark:bg-slate-900 overflow-hidden pt-7 sm:pt-10 md:pt-12 px-4 sm:px-5">
         <div className="max-w-7xl mx-auto flex flex-col gap-6 items-center md:flex-row">
           {/* HERO TEXT */}
           <div className="flex flex-col gap-5 items-center text-center md:items-start md:text-left md:w-1/2">
@@ -111,7 +112,7 @@ function LearningPaths() {
               Learning paths
             </h1>
 
-            <p className="text-neutral-500 text-base sm:text-lg leading-relaxed max-w-xl">
+            <p className="text-neutral-500 dark:text-neutral-300 text-base sm:text-lg leading-relaxed max-w-xl">
               Read a short lesson, then practice it on a real project straight
               away. Start with the basics, or jump to accessibility, frameworks,
               or testing.
@@ -130,13 +131,13 @@ function LearningPaths() {
       </section>
 
       {/* LEARNING PATH CARDS */}
-      <section className="bg-gradient-to-b from-blue-50 to-white pb-8 pt-8 px-4 sm:px-5">
+      <section className=" bg-blue-50  dark:bg-slate-900 pb-8 pt-8 px-4 sm:px-5">
         <div className="max-w-5xl mx-auto">
           <ul className="flex flex-col gap-5">
             {learningPaths.map((path, index) => (
               <li
                 key={path.title}
-                className="bg-white border border-blue-100 rounded-2xl w-full flex flex-col-reverse gap-6 p-5 sm:p-6 md:flex-row md:items-stretch"
+                className="bg-white  border border-blue-100 rounded-2xl w-full flex flex-col-reverse gap-6 p-5 sm:p-6 md:flex-row md:items-stretch"
               >
                 {/* CARD TEXT */}
                 <div className="flex flex-col gap-4 items-start md:justify-center md:flex-1">
@@ -184,6 +185,7 @@ function LearningPaths() {
         </div>
       </section>
     </main>
+    
   );
 }
 

@@ -129,11 +129,11 @@ function Challenges() {
   };
 
   return (
-    <main className="bg-gradient-to-br from-blue-50 via-white to-sky-50 min-h-screen">
+    <main className="bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 min-h-screen transition-colors duration-300">
       {/* BREADCRUMB */}
-      <div className="bg-gradient-to-br from-blue-100 via-white to-sky-100 border-y border-blue-200 px-5">
+      <div className="bg-gradient-to-br from-blue-50 via-white to-sky-50 dark:from-gray-950 dark:via-gray-900 dark:to-slate-900 transition-colors duration-300 border-y border-blue-200 px-5">
         <div className="max-w-7xl mx-auto">
-          <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold uppercase tracking-wider">
+          <span className="inline-block border-x border-blue-100 px-5 py-3 font-bold dark:text-slate-100 uppercase tracking-wider">
             Challenges
           </span>
         </div>
