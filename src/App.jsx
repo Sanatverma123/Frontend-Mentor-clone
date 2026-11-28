@@ -34,61 +34,102 @@ function AppRoutes() {
   return (
     <>
       {/* Global Theme Toggle */}
-     
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route element={<MainLayout />}>
             <Route
               path="/"
-              element={<AnimatedPage><Home /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <Home />
+                </AnimatedPage>
+              }
             />
 
             <Route
               path="/learning-paths"
-              element={<AnimatedPage><LearningPaths /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <LearningPaths />
+                </AnimatedPage>
+              }
             />
 
             <Route
               path="/challenges"
-              element={<AnimatedPage><Challenges /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <Challenges />
+                </AnimatedPage>
+              }
             />
 
             <Route
               path="/contact"
-              element={<AnimatedPage><Contact /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <Contact />
+                </AnimatedPage>
+              }
             />
 
             <Route
               path="/articles"
-              element={<AnimatedPage><Articles /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <Articles />
+                </AnimatedPage>
+              }
             />
 
             <Route
               path="/guides"
-              element={<AnimatedPage><Guides /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <Guides />
+                </AnimatedPage>
+              }
             />
 
             {/* Solutions Pages */}
 
             <Route
               path="/solutions"
-              element={<AnimatedPage><Solutions /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <Solutions />
+                </AnimatedPage>
+              }
             />
 
             <Route
               path="/tags"
-              element={<AnimatedPage><Tags /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <Tags />
+                </AnimatedPage>
+              }
             />
 
             <Route
               path="/wall"
-              element={<AnimatedPage><Wall /></AnimatedPage>}
+              element={
+                <AnimatedPage>
+                  <Wall />
+                </AnimatedPage>
+              }
             />
-          </Route>
-          <Route
-            path="/hire-developers"
-            element={<AnimatedPage><Homehir /></AnimatedPage>}/>
+            </Route>
+            <Route
+              path="/hire-developers"
+              element={
+                <AnimatedPage>
+                  <Homehir />
+                </AnimatedPage>
+              }
+            />
+          
         </Routes>
       </AnimatePresence>
     </>

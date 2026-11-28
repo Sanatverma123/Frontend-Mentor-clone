@@ -1,58 +1,83 @@
 
 import { Code, BadgeCheck, Rocket } from "lucide-react";
+
 function WhyHireSection() {
+  const features = [
+    {
+      icon: Code,
+      title: "Real-world skills",
+      description:
+        "Our developers have completed many professionally designed, industry-standard projects, not just coding exercises. Review their code and finished work to quickly gauge their capabilities in HTML, CSS, JavaScript, and modern frameworks.",
+    },
+    {
+      icon: BadgeCheck,
+      title: "Proven project experience",
+      description:
+        "Skip guesswork. Quickly evaluate candidates by exploring live projects they’ve built. See how they handle responsive design, accessibility, and performance before starting a conversation.",
+    },
+    {
+      icon: Rocket,
+      title: "Self-motivated talent",
+      description:
+        "Our community attracts developers who voluntarily engage in continuous learning and skill enhancement. They are proactive, passionate, and ready to contribute from day one.",
+    },
+  ];
+
   return (
-    <section className="container-xl flex flex-col gap-6 items-center tablet:gap-8">
-      <h2 className="font-secondary text-3xl tablet:text-5xl leading-tight tablet:max-w-[30ch] tablet:text-center">
-        Why hire through Frontend Mentor?
-      </h2>
-      <ul className="grid grid-cols-3 tablet:grid-cols-2 px-40 pb-16 gap-5 w-full max-w-none">
-        {/* Card 1 */}
-        <li className="bg-white border border-neutral-200 isolate relative rounded-2xl w-full flex flex-col gap-4 p-5">
-          <span className="aspect-square bg-blue-100 pt-4 flex-center rounded-lg w-[4.5rem]">
-            <Code aria-hidden="true" className="text-blue-500 w-full h-12" />
-          </span>
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
 
-          <h3 className="font-secondary text-xl">Real-world skills</h3>
+      <div className="max-w-7xl mx-auto flex flex-col gap-6 sm:gap-8">
 
-          <p className="text-neutral-500">
-            Our developers have completed many professionally designed,
-            industry-standard projects, not just coding exercises. Review their
-            code and finished work to quickly gauge their capabilities in HTML,
-            CSS, JavaScript, and modern frameworks.
-          </p>
-        </li>
+        {/* SECTION HEADING */}
+        <div className="flex flex-col items-center text-center gap-4">
 
-        {/* Card 2 */}
-        <li className="bg-white border border-neutral-200 isolate relative rounded-2xl w-full flex flex-col gap-4 p-5">
-          <span className="aspect-square bg-blue-100 pt-4 flex-center rounded-lg w-[4.5rem]">
-            <BadgeCheck aria-hidden="true" className="text-blue-500 w-full h-12" />
-          </span>
+          <h2 className="font-secondary text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-gray-900 dark:text-white max-w-[30ch]">
+            Why hire through Frontend Mentor?
+          </h2>
 
-          <h3 className="font-secondary text-xl">Proven project experience</h3>
+          <div className="w-16 h-1 bg-blue-500 rounded-full"></div>
 
-          <p className="text-neutral-500">
-            Skip guesswork. Quickly evaluate candidates by exploring live
-            projects they’ve built. See how they handle responsive design,
-            accessibility, and performance before starting a conversation.
-          </p>
-        </li>
+        </div>
 
-        {/* Card 3 */}
-        <li className="bg-white border border-neutral-200 isolate relative rounded-2xl w-full flex flex-col gap-4 p-5">
-          <span className="aspect-square bg-blue-100 pt-4 flex-center rounded-lg w-[4.5rem]">
-             <Rocket aria-hidden="true" className="text-blue-500 w-full h-12" />
-          </span>
+        {/* FEATURE CARDS */}
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
 
-          <h3 className="font-secondary text-xl">Self-motivated talent</h3>
+          {features.map((item, index) => {
+            const Icon = item.icon;
 
-          <p className="text-neutral-500">
-            Our community attracts developers who voluntarily engage in
-            continuous learning and skill enhancement. They are proactive,
-            passionate, and ready to contribute from day one.
-          </p>
-        </li>
-      </ul>
+            return (
+              <li
+                key={index}
+                className="bg-white dark:bg-gray-800 border border-neutral-200 dark:border-gray-700 rounded-2xl w-full h-full flex flex-col items-start gap-4 p-5 sm:p-6 lg:p-7 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+
+                {/* ICON */}
+                <span className="w-[4.5rem] h-[4.5rem] shrink-0 bg-blue-100 dark:bg-blue-950 flex items-center justify-center rounded-xl">
+
+                  <Icon
+                    aria-hidden="true"
+                    className="text-blue-500 dark:text-blue-400 w-8 h-8"
+                  />
+
+                </span>
+
+                {/* TITLE */}
+                <h3 className="font-secondary text-lg sm:text-xl font-semibold text-gray-900 dark:text-white leading-snug">
+                  {item.title}
+                </h3>
+
+                {/* DESCRIPTION */}
+                <p className="text-sm sm:text-base text-neutral-600 dark:text-gray-300 leading-relaxed">
+                  {item.description}
+                </p>
+
+              </li>
+            );
+          })}
+
+        </ul>
+
+      </div>
     </section>
   );
 }
