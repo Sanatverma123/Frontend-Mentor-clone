@@ -131,13 +131,13 @@ function LearningPaths() {
       </section>
 
       {/* LEARNING PATH CARDS */}
-      <section className=" bg-blue-50  dark:bg-slate-900 pb-8 pt-8 px-4 sm:px-5">
+      <section className=" bg-blue-50 dark:bg-gray-900 pb-8 pt-8 px-4 sm:px-5">
         <div className="max-w-5xl mx-auto">
           <ul className="flex flex-col gap-5">
             {learningPaths.map((path, index) => (
               <li
                 key={path.title}
-                className="bg-white  border border-blue-100 rounded-2xl w-full flex flex-col-reverse gap-6 p-5 sm:p-6 md:flex-row md:items-stretch"
+                className="bg-white dark:bg-gray-700 border border-blue-100 rounded-2xl w-full flex flex-col-reverse gap-6 p-5 sm:p-6 md:flex-row md:items-stretch"
               >
                 {/* CARD TEXT */}
                 <div className="flex flex-col gap-4 items-start md:justify-center md:flex-1">
@@ -147,20 +147,20 @@ function LearningPaths() {
                   >
                     <span className="w-3 h-3 bg-blue-500 rounded-sm"></span>
 
-                    <span className="font-bold leading-none text-neutral-800 text-xs sm:text-sm uppercase">
+                    <span className="font-bold leading-none text-neutral-800 dark:text-white text-xs sm:text-sm uppercase">
                       {path.level}
                     </span>
                   </div>
 
                   {/* TITLE */}
                   <a href={path.link} className="hover:underline">
-                    <h2 className="text-xl sm:text-2xl font-semibold text-neutral-900 leading-snug">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-slate-100 dark:text-white leading-snug">
                       {path.title}
                     </h2>
                   </a>
 
                   {/* DESCRIPTION */}
-                  <p className="text-neutral-500 text-sm sm:text-base leading-relaxed">
+                  <p className="text-neutral-500 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                     {path.description}
                   </p>
                 </div>

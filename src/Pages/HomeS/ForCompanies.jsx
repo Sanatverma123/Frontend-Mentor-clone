@@ -21,15 +21,15 @@ function ForCompanies() {
       <div className="space-y-5 sm:space-y-6 md:space-y-7">
 
         {/* ROW 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
           {/* TEXT */}
           <div className="p-5 sm:p-6 md:p-6 lg:p-8 flex flex-col justify-center items-start">
-            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-slate-900 leading-snug">
+            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white leading-snug">
               Train junior developers with real projects
             </h3>
 
-            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-sm lg:text-base text-slate-600 leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-sm lg:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
               Skip theoretical tutorials. Give your junior developers 133
               real-world challenges that build practical skills. Get an AI code
               review on every developer’s submission to identify skill gaps and
@@ -52,7 +52,7 @@ function ForCompanies() {
         </div>
 
         {/* ROW 2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
           {/* IMAGE */}
           <div className="p-4 sm:p-5 md:p-5 lg:p-6 flex items-center justify-center order-2 md:order-1">
@@ -65,11 +65,11 @@ function ForCompanies() {
 
           {/* TEXT */}
           <div className="p-5 sm:p-6 md:p-6 lg:p-8 flex flex-col justify-center items-start order-1 md:order-2">
-            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-slate-900 leading-snug">
+            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold text-slate-900 dark:text-white leading-snug">
               Discover junior talent through skills, not resumes
             </h3>
 
-            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-sm lg:text-base text-slate-600 leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-sm lg:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
               See real code and live projects upfront, then connect directly
               with developers who've demonstrated the skills and passion you
               need.

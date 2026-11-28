@@ -72,8 +72,46 @@ button, a {
 
 /* Technologies Dark Mode */
 
+html.dark .technologies-page {
+  background-color: #111827;
+  color: #edeff1;
+}
 
+html.dark .technologies-page h1,
+html.dark .technologies-page h2,
+html.dark .technologies-page h3 {
+  color: #e7e3e3;
+}
 
+/* TECHNOLOGIES PAGE DARK MODE */
+html.dark .technologies-page {
+  background-color: #111827;
+  color: #edeff1;
+}
+
+/* HEADINGS */
+html.dark .technologies-page h1,
+html.dark .technologies-page h2,
+html.dark .technologies-page h3 {
+  color: #e7e3e3;
+}
+
+/* PARAGRAPHS */
+html.dark .technologies-page p {
+  color: #d1d5db;
+}
+
+/* CARDS */
+html.dark .technologies-page li,
+html.dark .technologies-page .tag-card {
+  background-color: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+/* LINKS */
+html.dark .technologies-page a {
+  color: #93c5fd;
+}
 
 /* Technologies Dark Mode - Cards stay white */
 html.dark .technologies-page li.bg-white,

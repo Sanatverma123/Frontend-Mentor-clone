@@ -33,7 +33,7 @@ function GetFeedback() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
 
         {/* CARD 1 */}
-        <div className="group min-w-0 bg-gradient-to-br from-blue-50 to-white p-5 sm:p-5 md:p-5 lg:p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div className="group min-w-0 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 p-5 sm:p-5 md:p-5 lg:p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
           <div className="w-10 h-10 sm:w-11 sm:h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-blue-600 transition-all duration-300">
             <MessageCircle
@@ -42,11 +42,11 @@ function GetFeedback() {
             />
           </div>
 
-          <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">
+          <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-3 leading-snug group-hover:text-blue-600 transition">
             Get an AI code review on every solution
           </h3>
 
-          <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
             Each finding points to specific lines in your code and explains
             what to change and why. Reviews cover code quality, accessibility,
             your commits, and your README, and take your challenge brief into
@@ -55,7 +55,7 @@ function GetFeedback() {
         </div>
 
         {/* CARD 2 */}
-        <div className="group min-w-0 bg-gradient-to-br from-blue-50 to-white p-5 sm:p-5 md:p-5 lg:p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div className="group min-w-0 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 p-5 sm:p-5 md:p-5 lg:p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
           <div className="w-10 h-10 sm:w-11 sm:h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-blue-600 transition-all duration-300">
             <Layers
@@ -64,11 +64,11 @@ function GetFeedback() {
             />
           </div>
 
-          <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">
+          <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-3 leading-snug group-hover:text-blue-600 transition">
             Take on bigger, realistic projects
           </h3>
 
-          <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
             Work on multi-page sites, dashboards, and full-stack apps.
             Projects this size make you plan your components and keep a
             growing codebase organized. Build to a design file, or take
@@ -77,7 +77,7 @@ function GetFeedback() {
         </div>
 
         {/* CARD 3 */}
-        <div className="group min-w-0 bg-gradient-to-br from-blue-50 to-white p-5 sm:p-5 md:p-5 lg:p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div className="group min-w-0 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 p-5 sm:p-5 md:p-5 lg:p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
           <div className="w-10 h-10 sm:w-11 sm:h-11 bg-blue-100 rounded-xl flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-blue-600 transition-all duration-300">
             <Palette
@@ -86,11 +86,11 @@ function GetFeedback() {
             />
           </div>
 
-          <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition">
+          <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-3 leading-snug group-hover:text-blue-600 transition">
             Practice the design-to-code workflow
           </h3>
 
-          <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-sm lg:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
             Get professional design files for every design challenge and
             build to real specs: colors, spacing, type, and more.
             It’s the same workflow developers use on the job.

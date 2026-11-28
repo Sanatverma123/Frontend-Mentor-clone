@@ -344,7 +344,7 @@ function Solutions() {
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="group relative px-4 pb-2 text-black font-semibold text-lg hover:text-blue-800 transition"
+              className="group relative px-4 pb-2 text-black dark:text-white font-semibold text-lg hover:text-blue-800 transition"
             >
               {showAll ? "Show less" : "Load more"}
 
@@ -354,13 +354,13 @@ function Solutions() {
         )}
 
         {displayedSolutions.length === 0 && (
-          <p className="text-center text-neutral-500 py-10">
+          <p className="text-center dark:text-white text-neutral-500 py-10">
             No solutions found.
           </p>
         )}
 
         {/* DISCORD SECTION */}
-        <div className="bg-white border border-blue-400 rounded-2xl px-6 py-10 text-center text-black flex flex-col items-center gap-5">
+        <div className="bg-white dark:bg-gray-800 border border-blue-400 rounded-2xl px-6 py-10 text-center text-black dark:text-white flex flex-col items-center gap-5">
           <h2 className="text-xl font-bold uppercase tracking-widest">
             Join our Discord community
           </h2>

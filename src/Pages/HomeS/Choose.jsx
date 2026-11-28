@@ -22,14 +22,14 @@ function Choose() {
       <div className="space-y-5 sm:space-y-6 md:space-y-7">
 
         {/* ROW 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
           <div className="p-5 sm:p-6 md:p-6 lg:p-8">
-            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-slate-900 leading-snug">
+            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-slate-900 dark:text-white leading-snug">
               Move beyond passive learning
             </h3>
 
-            <p className="text-slate-600 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base md:text-sm lg:text-base">
+            <p className="text-slate-600 dark:text-slate-400 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base md:text-sm lg:text-base">
               Stop watching endless tutorials and start building real-world projects.
               Turn your ideas into interactive websites using professional designs and practical challenges. Strengthen your
               HTML, CSS, and JavaScript skills, solve real development problems,
@@ -47,7 +47,7 @@ function Choose() {
         </div>
 
         {/* ROW 2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
           <div className="p-4 sm:p-5 md:p-5 lg:p-6 flex items-center justify-center order-2 md:order-1">
             <img
@@ -58,11 +58,11 @@ function Choose() {
           </div>
 
           <div className="p-5 sm:p-6 md:p-6 lg:p-8 order-1 md:order-2">
-            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-slate-900 leading-snug">
+            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-slate-900 dark:text-white leading-snug">
               Build a portfolio you can explain
             </h3>
 
-            <p className="text-slate-600 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base md:text-sm lg:text-base">
+            <p className="text-slate-600 dark:text-slate-400 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base md:text-sm lg:text-base">
               Build a portfolio filled with real-world projects that highlight your frontend development skills.
               Showcase your ability to turn professional designs into responsive, functional websites.
               Each project gives you an opportunity to demonstrate your problem-solving skills, creativity,
@@ -73,14 +73,14 @@ function Choose() {
         </div>
 
         {/* ROW 3 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
           <div className="p-5 sm:p-6 md:p-6 lg:p-8">
-            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-slate-900 leading-snug">
+            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-slate-900 dark:text-white leading-snug">
               Build by hand first, then with AI
             </h3>
 
-            <p className="text-slate-600 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base md:text-sm lg:text-base">
+            <p className="text-slate-600 dark:text-slate-400 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base md:text-sm lg:text-base">
               Start by writing code yourself to build a strong understanding of HTML, CSS, and JavaScript.
               Learn how different components work, understand code structure, and develop the confidence to solve problems independently.
               Once you have a solid foundation, use AI tools to speed up development, explore new ideas, and work on larger, more complex projects.
@@ -98,7 +98,7 @@ function Choose() {
         </div>
 
         {/* ROW 4 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
           <div className="p-4 sm:p-5 md:p-5 lg:p-6 flex items-center justify-center order-2 md:order-1">
             <img
@@ -109,11 +109,11 @@ function Choose() {
           </div>
 
           <div className="p-5 sm:p-6 md:p-6 lg:p-8 order-1 md:order-2">
-            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-slate-900 leading-snug">
+            <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-slate-900 dark:text-white leading-snug">
               Join a supportive developer community
             </h3>
 
-            <p className="text-slate-600 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base md:text-sm lg:text-base">
+            <p className="text-slate-600 dark:text-slate-400 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base md:text-sm lg:text-base">
               Become part of a welcoming community of developers who are passionate about learning and building together.
               Share your projects, exchange ideas, ask questions, and receive valuable feedback from fellow developers.
               Learn from different experiences, discover new techniques, and get inspired by other people's work. Stay motivated,

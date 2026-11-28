@@ -209,7 +209,7 @@ function Technologies() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search tags..."
-              className="block p-2 placeholder-neutral-500 rounded w-80 border border-neutral-200 bg-white"
+              className="block p-2 placeholder-neutral-500 rounded w-80 border border-neutral-200 bg-white dark:bg-gray-800"
             />
           </div>
           <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6">

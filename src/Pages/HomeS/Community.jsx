@@ -45,19 +45,22 @@ function Community() {
       <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-8 sm:mb-10 md:mb-12 gap-5 md:gap-6">
 
         <div className="w-full text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 dark:text-slate-100 leading-tight">
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
             A little from our community
           </h2>
 
-          <p className="mt-3 text-sm sm:text-base md:text-base text-slate-500 dark:text-slate-300 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-slate-500 dark:text-slate-300 leading-relaxed">
             See what developers are saying about their journey.
           </p>
 
           <div className="w-16 h-1 bg-blue-500 rounded-full mt-4 mx-auto md:mx-0"></div>
+
         </div>
 
         {/* ARROW BUTTONS */}
         <div className="flex justify-center md:justify-end items-center gap-3 shrink-0">
+
           <Button
             onClick={() => scrollCards("left")}
             ariaLabel="Previous reviews"
@@ -73,6 +76,7 @@ function Community() {
           >
             <ArrowRight size={19} />
           </Button>
+
         </div>
       </div>
 
@@ -81,16 +85,19 @@ function Community() {
         ref={sliderRef}
         className="flex gap-4 sm:gap-5 md:gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory pt-4 pb-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
+
         {reviews.map((review, index) => (
           <div
             key={index}
             className="flex-none w-full sm:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)] snap-start"
           >
-            <div className="group h-full min-w-0 bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-4 sm:p-5 md:p-5 lg:p-6 shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
+
+            <div className="group h-full min-w-0 bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 border border-blue-100 dark:border-gray-700 rounded-2xl p-4 sm:p-5 md:p-5 lg:p-6 shadow-sm hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300">
 
               {/* TOP */}
               <div className="flex justify-between items-center mb-5 gap-2">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600">
+
+                <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-blue-100 dark:bg-blue-950 flex items-center justify-center text-blue-600 dark:text-blue-400">
                   <Quote size={20} />
                 </div>
 
@@ -99,34 +106,38 @@ function Community() {
                     <Star key={star} size={15} fill="currentColor" />
                   ))}
                 </div>
+
               </div>
 
               {/* REVIEW TEXT */}
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-sm md:text-sm lg:text-base">
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-sm md:text-sm lg:text-base">
                 {review.text}
               </p>
 
               {/* BOTTOM */}
-              <div className="mt-6 pt-4 border-t border-blue-100 flex items-center gap-3">
+              <div className="mt-6 pt-4 border-t border-blue-100 dark:border-gray-700 flex items-center gap-3">
 
-                <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-sm font-bold">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-700 dark:to-blue-900 flex items-center justify-center text-white text-sm font-bold">
                   {index + 1}
                 </div>
 
                 <div className="min-w-0">
-                  <h3 className="font-bold text-sm sm:text-sm md:text-base text-slate-900">
+
+                  <h3 className="font-bold text-sm sm:text-sm md:text-base text-slate-900 dark:text-white">
                     Community Member
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-500">
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
                     Frontend Developer
                   </p>
+
                 </div>
               </div>
 
             </div>
           </div>
         ))}
+
       </div>
     </section>
   );
