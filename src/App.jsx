@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -135,10 +136,23 @@ function AppRoutes() {
     </>
   );
 }
-
 function App() {
   return (
     <BrowserRouter basename="/Frontend-Mentor-clone">
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: "#1f2937",
+            color: "#fff",
+            borderRadius: "12px",
+            padding: "12px 16px",
+          },
+        }}
+      />
+
       <AppRoutes />
     </BrowserRouter>
   );
