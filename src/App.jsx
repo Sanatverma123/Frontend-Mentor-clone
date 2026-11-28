@@ -12,9 +12,8 @@ import Tags from "./Pages/Solutions/Tags/Tags";
 import Wall from "./Pages/Solutions/WallOfFame/Wall";
 import Articles from "./Pages/Articles/Articles";
 import Guides from "./Pages/Guides/Guides";
-
-import ThemeToggle from "./component/ThemeToggle";
-import Homehir from "./Pages/ForCompanies/HireDevloper/Homehir.jsx";
+import Homehir from "./Pages/ForCompanies/HireDevloper/Hero/Homehir.jsx";
+import HomeWhy from "./Pages/ForCompanies/HireDevloper/Why/HomeWhy";
 
 function AnimatedPage({ children }) {
   return (
@@ -121,16 +120,24 @@ function AppRoutes() {
                 </AnimatedPage>
               }
             />
-            </Route>
-            <Route
-              path="/hire-developers"
-              element={
-                <AnimatedPage>
-                  <Homehir />
-                </AnimatedPage>
-              }
-            />
-          
+          </Route>
+          <Route
+            path="/hire-developers"
+            element={
+              <AnimatedPage>
+                <Homehir />
+              </AnimatedPage>
+            }
+          />
+
+          <Route
+            path="/why-us"
+            element={
+              <AnimatedPage>
+                <HomeWhy />
+              </AnimatedPage>
+            }
+          />
         </Routes>
       </AnimatePresence>
     </>

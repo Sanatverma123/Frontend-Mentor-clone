@@ -1,9 +1,9 @@
 
-import ThemeToggle from "../../../component/ThemeToggle";
+import ThemeToggle from "../../../../component/ThemeToggle";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
-import Button from "../../../component/Button";
+import Button from "../../../../component/Button";
 
 function HiringNavbar() {
   const [useCasesOpen, setUseCasesOpen] = useState(false);
@@ -21,7 +21,7 @@ function HiringNavbar() {
   ];
 
   const navLink =
-    "font-secondary font-bold italic text-xs xl:text-sm uppercase whitespace-nowrap hover:text-rose-600 dark:text-white dark:hover:text-rose-400 transition-colors";
+    "font-secondary font-bold italic text-xs xl:text-sm uppercase whitespace-nowrap hover:text-blue-600 dark:text-white dark:hover:text-blue-600 transition-colors";
 
   // Close menu on outside click and Escape
   useEffect(() => {

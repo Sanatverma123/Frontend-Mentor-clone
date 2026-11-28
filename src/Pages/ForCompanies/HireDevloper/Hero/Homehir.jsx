@@ -1,5 +1,5 @@
 import HiringNavbar from "./HiringNavbar";
-import AnimatedSection from "../../../component/AnimatedSection";
+import AnimatedSection from "../../../../component/AnimatedSection";
 import HireDevelopers from "./HireDevelopers";
 import Why from "./Why";
 import Accelerate from "./Accelerate";
